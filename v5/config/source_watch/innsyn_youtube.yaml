@@ -1,0 +1,122 @@
+id: innsyn
+archive: v5/workspace/source_intake/innsyn/youtube
+lookback_days: 7
+languages:
+- nb
+- 'no'
+- nn
+- en
+selection_guidance: Velg norsk politikk, makt, offentlige penger, samfunn, undersøkelser
+  og relevant forklaringsjournalistikk. Bruk semantisk skjønn, ikke ordtreff. Populær
+  betyr ikke pålitelig. Bevar uavhengighet og original kildekjede.
+discovery_checked_at: '2026-10-31T16:47:16.673055+00:00'
+channels:
+- id: UCk5pvsyZJoYJBd7_oFPTlRQ
+  name: Dagbladet
+  url: https://www.youtube.com/channel/UCk5pvsyZJoYJBd7_oFPTlRQ
+  kind: broad_newsroom
+  reason: Stor norsk nyhetsredaksjon; velg journalistikk, ikke automatisk alle underholdningsklipp.
+  subscribers_at_discovery: 434000
+- id: UCBevtY7fDYVEVkgWez2tAgA
+  name: NRK
+  url: https://www.youtube.com/channel/UCBevtY7fDYVEVkgWez2tAgA
+  kind: broad_newsroom
+  reason: Allmennkringkaster; kanalens samlede abonnenter omfatter mye annet enn politikk.
+  subscribers_at_discovery: 414000
+- id: UCTQJ4_K6Y-CE3XttBXyvGbA
+  name: TV 2
+  url: https://www.youtube.com/channel/UCTQJ4_K6Y-CE3XttBXyvGbA
+  kind: broad_newsroom
+  reason: Stor norsk redaksjon; vurder faktisk tema og originalrapportering per video.
+  subscribers_at_discovery: 366000
+- id: UCUy3Qp2OBFoC3E_HMLpjZJA
+  name: Wolfgang Wee Uncut
+  url: https://www.youtube.com/channel/UCUy3Qp2OBFoC3E_HMLpjZJA
+  kind: long_interview
+  reason: Stor norsk samtalekanal med politiske og samfunnsfaglige gjester; gjestens
+    påstander må kontrolleres.
+  subscribers_at_discovery: 56600
+- id: UCmR2g9t0K16NFGe153xrLAQ
+  name: Tankesmien Civita
+  url: https://www.youtube.com/channel/UCmR2g9t0K16NFGe153xrLAQ
+  kind: think_tank
+  reason: Politikk og ideer fra en liberal tankesmie; merkes som parts-/idebasert
+    analyse.
+  subscribers_at_discovery: 29400
+- id: UCs8Mm9kxyb9A5T_42P4ooPQ
+  name: iNyheter
+  url: https://www.youtube.com/channel/UCs8Mm9kxyb9A5T_42P4ooPQ
+  kind: newsroom_commentary
+  reason: Nyheter, politiske samtaler og kommentarer; skill egen dokumentasjon fra
+    påstander.
+  subscribers_at_discovery: 21700
+- id: UChuzHpE1ZZPuGtgTL4UXriw
+  name: Nettavisen
+  url: https://www.youtube.com/channel/UChuzHpE1ZZPuGtgTL4UXriw
+  kind: broad_newsroom
+  reason: Offisiell norsk nyhetskanal; vurder politikk, økonomi og journalistisk relevans.
+  subscribers_at_discovery: 18900
+- id: UCQb24mz_w5YwsRd1AHKS-oA
+  name: Henrik Beckheim Podcast
+  url: https://www.youtube.com/channel/UCQb24mz_w5YwsRd1AHKS-oA
+  kind: long_interview
+  reason: Samfunns- og politiske intervjuer; inkluder norsk relevans og noter språk.
+  subscribers_at_discovery: 17900
+- id: UCyjsEEv1m_h7djEWyiqen9A
+  name: Document
+  url: https://www.youtube.com/channel/UCyjsEEv1m_h7djEWyiqen9A
+  kind: newsroom_commentary
+  reason: Selvbeskrevet konservativt mediehus; skill kommentar, intervju og kildebelagte
+    funn.
+  subscribers_at_discovery: 12400
+- id: UCJo3sbuoZo9fqG0LEvMWMOw
+  name: Minerva
+  url: https://www.youtube.com/channel/UCJo3sbuoZo9fqG0LEvMWMOw
+  kind: newsroom_commentary
+  reason: Politikk og samfunn fra selvbeskrevet høyresideavis; vurder evidens uavhengig
+    av ståsted.
+  subscribers_at_discovery: 6700
+- id: UCPjtNGZGOpR9AXlu09WsPfg
+  name: Manifest Media
+  url: https://www.youtube.com/channel/UCPjtNGZGOpR9AXlu09WsPfg
+  kind: newsroom_commentary
+  reason: Selvbeskrevet mediehus til venstre for midten; vurder evidens uavhengig
+    av ståsted.
+  subscribers_at_discovery: 4230
+- id: UCpDU2cTkpHOcKf3c8m6nF6w
+  name: Subjekt NO
+  url: https://www.youtube.com/channel/UCpDU2cTkpHOcKf3c8m6nF6w
+  kind: newsroom_commentary
+  reason: Kultur- og samfunnsdebatt; relevant politikk og journalistikk velges semantisk.
+  subscribers_at_discovery: 3920
+- id: UCMGxQUghpP0ZlrbzCPxoE8Q
+  name: WTV
+  url: https://www.youtube.com/channel/UCMGxQUghpP0ZlrbzCPxoE8Q
+  kind: long_interview
+  reason: Norske podkaster og dokumentarer; samme produksjonsmiljø som WWU, unngå
+    doble kildekjeder.
+  subscribers_at_discovery: 2040
+- id: UCQz_Ho0jf2x0CCHbVWRfySw
+  name: Faktisk
+  url: https://www.youtube.com/channel/UCQz_Ho0jf2x0CCHbVWRfySw
+  kind: fact_checking
+  reason: Faktasjekkredaksjon; liten YouTube-kanal, med på dokumentasjonsverdi.
+  subscribers_at_discovery: 1720
+- id: UCx-wzJCudq5pMVbGBo8jeHw
+  name: Aftenposten
+  url: https://www.youtube.com/channel/UCx-wzJCudq5pMVbGBo8jeHw
+  kind: newsroom
+  reason: Norsk abonnementsavis; verifiser aktualitet og relevans fra faktiske opplastinger.
+  subscribers_at_discovery: 1680
+- id: UCj_Af9chEimnS0-_OwFcS7A
+  name: Filter
+  url: https://www.youtube.com/channel/UCj_Af9chEimnS0-_OwFcS7A
+  kind: newsroom
+  reason: Journalistikk og dokumentasjon; liten kanal, ikke valgt som stor på abonnenter.
+  subscribers_at_discovery: 1350
+- id: UCYWsYel3XPnD-eAEjw7_ysQ
+  name: Aftenpodden
+  url: https://www.youtube.com/channel/UCYWsYel3XPnD-eAEjw7_ysQ
+  kind: political_analysis
+  reason: Aftenpostens politiske podkast; samme kildefamilie som Aftenposten.
+  subscribers_at_discovery: 1290

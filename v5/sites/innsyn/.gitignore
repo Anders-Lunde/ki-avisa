@@ -1,0 +1,6 @@
+dist/
+__pycache__/
+.sites-runtime/
+.sites-checkout*/
+*.tar.gz
+*.tgz

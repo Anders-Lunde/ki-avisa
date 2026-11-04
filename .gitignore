@@ -1,0 +1,27 @@
+# Private operational material and generated output
+v5/workspace/
+v5/experiments/
+v5/skill_outputs/
+.codex_tasks/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+*.eml
+*.base64url
+*.sent.json
+v5/config/channels/*.yaml
+!v5/config/channels/*.example.yaml
+v5/sites/*/dist/
+v5/sites/*/preview/
+v5/sites/*/articles/
+v5/sites/*/content/
+v5/sites/*/.openai/
+# Local links to shared tooling, never vendored copies
+v5/skills/
+v5/scripts/
+v5/lib/
+v5/prompts/
+v5/resources/
