@@ -1,5 +1,23 @@
 # Innsyn article site
 
+The owner requested the actual public website on 4 November 2026, confirmed
+Anders Lunde as responsible editor and lunde.anders@gmail.com as public contact,
+and authorized use of the existing design. https://ki-avisa.pages.dev/ now
+serves the clean public export, with zero published articles at deployment.
+See `docs/HOSTING.md` for deployment details. `holding/` is historical.
+
+Public builds use `build.py --output public`, followed by `check_public.py`.
+Only generated `public/` is uploaded to Cloudflare. Preview builds cannot target
+that output. The existing private `dist/` and Sites preview are preserved.
+
+After an actual editorial publication decision and public-export review,
+`publish.py prepare --reviewed-by <actual reviewer>` records exact export
+hashes. The active local monitor invokes `publish.py run` every 6 hours.
+It deploys matching changed releases once, skips unchanged/unreviewed exports
+and never changes editorial decisions. See `docs/HOSTING.md`. `assets/` contains
+only public favicon files and the social image. Public SEO metadata and sitemap
+are generated; private previews retain noindex.
+
 Buildless static article site. `content/*.json` contains only text deliberately
 prepared for readers. Never point it at a case directory or raw correspondence.
 `build.py` validates source URLs and escapes text; `dist/` is generated output.
@@ -58,17 +76,17 @@ Articles expose a contents navigation, numbered sources with return links to
 each citation, source domains, and a permanent changes/corrections section.
 Published reporting and method/draft texts occupy separate homepage sections.
 AI newsroom attribution does not imply a human byline or owner approval gate.
-Host this build only in an owner-private Site. `.openai/hosting.json` retains
+Host preview builds only in an owner-private Site. `.openai/hosting.json` retains
 the Sites project identity; use the Sites skill workflow for source sync,
 packaging and publication, never another channel's hosting/OAuth.
 
-For an eventual public build, omit both flags. Only articles with
+For a public build, omit both preview/audition flags and pass `--output public`. Only articles with
 `status: published`, `approved_by` and `approved_at` appear. Those fields record
 the actual editorial decision under the channel mandate, with the deciding editor/agent and time. They must never be invented. The
 builder validates mechanics; it cannot judge evidence, privacy or fairness.
 Keep the decision in the private case too. All draft pages and auditions are
-removed on a clean rebuild. Establish editor/contact/channel identity before
-public launch and update the introductory copy accordingly. Under the Norwegian
+removed on a clean rebuild. Editor/contact identity was established by the owner
+on 4 November 2026 and is included in the footer and about page. Under the Norwegian
 media responsibility act (§§ 3-5, see docs/innsyn/REDAKSJON.md) the editor is a
 natural person whose name and contact details readers can see; the footer and
 about page must show them at launch, and the builder does not check this.

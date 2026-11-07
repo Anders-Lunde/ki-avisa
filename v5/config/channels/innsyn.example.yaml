@@ -197,6 +197,9 @@ llm:
     agent.first_draft: innsyn_opus_xhigh
     agent.draft_editorial_revise: innsyn_opus_xhigh
     agent.article: innsyn_opus_xhigh
+    agent.media_matched_rewrite: innsyn_opus_xhigh
+    agent.youtube_packaging: innsyn_opus_xhigh
+    agent.shorts_first_draft: innsyn_opus_xhigh
     agent.animation_assets: innsyn_opus_xhigh
     skill.animation_generate: innsyn_animation_sonnet_xhigh
     skill.animation_generate.strong: innsyn_animation_sonnet_xhigh

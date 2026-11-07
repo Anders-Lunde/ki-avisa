@@ -50,6 +50,26 @@ The migration was verified against the local AgentHouse checkout on 4 November
 executed. Publishing, political submissions and video production require their
 actual project mandate.
 
+From 4 November 2026, AgentHouse also supplies a shared prior-coverage check in
+`v5/prompts/includes/prior_coverage_check.md`. New journalism `research` tasks
+and episode research tasks include it automatically, including channel-specific
+templates. The check records exact-angle searches, closest original coverage,
+actual read scope/access gaps, the concrete audience contribution and a dated
+decision before wider research and routine contact. New cases mark the check as
+unfinished; existing tasks and historical receipts are preserved. Keep this
+project's dated check in the case's `editorial_review.md` and carry it into the
+writer handoff. The shared rule supplements the channel's mandate and editorial
+guidance; judgment still requires reading the relevant sources.
+
+The shared check also requires a separate audience-value assessment before
+commissioning wider work or routine contact: concrete reader payoff, verified
+basis and significance, strongest contrary evidence and its effect, and a
+proportionate next step or decision to park. New reporting cases mark
+`Nyhetsvurdering` unfinished. Renew the assessment before the next inquiry when
+new evidence weakens the premise; adding caveats alone does not justify
+continuing. This is the newsroom agent's judgment under the mandate, without
+per-message owner approval or an automated keyword score.
+
 Private archives, mail originals, licensed papers, credentials, audition audio,
 run logs and generated site previews remain local and ignored. GitHub is a
 source repository, not a backup of private reporting. Preserve the local archive

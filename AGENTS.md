@@ -19,6 +19,18 @@ Do not transfer private correspondence or source identities to KI-partiet.
 Check run/status receipts and existing sends before action. Use the standing
 journalistic mandate and connected Gmail tools for necessary correspondence;
 do not assign reporting to the owner. Preserve exact sent content/provider IDs.
+
+Exception: permission to use the owner's existing UiO/library access is not
+permission to contact UiO, its library/e-resource staff, publishers or access
+providers about that access, account, licence, automation or newsroom use.
+Such contact can identify the owner even without a username. Obtain the owner's
+explicit approval for the specific recipient and message before sending any
+such inquiry, follow-up or correction. Do not disclose the owner's affiliation,
+access route, account details or usage in ordinary reporting correspondence.
+Do not infer this approval from the standing journalistic mandate or from a
+request to find material through UiO. Continue authorized read-only research
+without turning access gaps into unsolicited support requests.
+
 Silence is not an admission. Keep facts, calculations and interpretations clear.
 Read originals, preserve contrary evidence and obtain actual opportunities to
 reply where required. Stop at real waiting and date the next action.

@@ -24,6 +24,8 @@ og se på tabellsider visuelt når uttrekket er uklart. <<EPISODE_CONTEXT>>
 4. **Leserverdi.** Er tittel og ingress det sterkeste dokumenterte poenget, eller
    gjentar de den offisielle linjen? Lærer en bred leser noe nytt? Er noe fyll? Er
    svaret så avhengig av en ventet kilde at saken bør vente?
+5. **Sammendraget** (`summary`). Er hvert punkt dekket av brødteksten, uten nye eller
+   sterkere påstander? Mangler det, eller er det for langt, er det en må-retting.
 
 Ikke lag rettinger for å rettferdiggjøre kontrollen. Består teksten, si det.
 

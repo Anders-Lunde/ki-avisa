@@ -31,6 +31,13 @@ python agenthouse.py intake --help
 
 Den faktiske kanalfilen er lokal og ignorert. For en ny klone: kopier
 `v5/config/channels/innsyn.example.yaml` til `innsyn.yaml` og konfigurer
-verifisert avsender før korrespondanse. Offentlig lansering og faktisk
-redaktør/kontakt er fortsatt ikke etablert. Migreringen publiserer ingen saker
-og endrer ikke den eksisterende private nettsidens tilgang.
+verifisert avsender før korrespondanse. Eieren bekreftet 4. november 2026
+Anders Lunde som ansvarlig redaktør og lunde.anders@gmail.com som offentlig
+kontakt, og bestilte offentlig nettsted uten private utkast eller internt
+materiale. Migreringen publiserer ingen saker og endrer ikke den eksisterende
+private nettsidens tilgang.
+
+Det offentlige nettstedet finnes på [ki-avisa.pages.dev](https://ki-avisa.pages.dev/).
+Det beholder det eksisterende designet og viser bare offentlig eksport:
+forside, metode og kontakt. Ingen artikkelutkast eller privat prøveinnhold er
+publisert. Se [hosting og oppdatering](docs/HOSTING.md).

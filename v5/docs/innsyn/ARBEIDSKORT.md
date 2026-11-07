@@ -24,12 +24,25 @@ En sak bestilles, og en artikkel skrives, bare når disse kan besvares i sakens
    stemmer påstanden?
 2. **Mulige svar, også det kjedelige.** Hvis svaret blir det offisielle, er saken
    fortsatt verdt å lese? Hvis ikke: hva må vi ha før vi skriver?
-3. **Hva er nytt** sammenliknet med eksisterende dekning? Krediter andres arbeid.
+3. **Eget bidrag** sammenliknet med eksisterende dekning: ny opplysning,
+   etterprøving eller en konkret bedre forklaring/visualisering. En allerede
+   stor og godt dekket sak kan ha verdi når fremstillingen løser et bestemt
+   forståelsesproblem. Se utprøvingsretningen i STRATEGI.md. Før en ordinær
+   bestilling og utsending: søk på det konkrete spørsmålet og de påståtte
+   konsekvensene, ikke bare temaet. Les de nærmeste relevante originalsakene.
+   Før søk, lest omfang, tilgangsgap, hva andre allerede har dokumentert og
+   hvilket konkret eget bidrag som gjenstår under «Dekningskontroll» i
+   `editorial_review.md`. «Mulig mer detaljert research» er ikke alene et eget
+   bidrag. En etterprøving eller oppdatering kan ha verdi også når temaet er
+   kjent, men begrunnelsen må vise hva den skal avklare. Krediter andres arbeid.
 4. **Den avgjørende kilden,** tilgangsvei og når vi kan ha den.
 5. **Hva avkrefter eller snevrer inn** saken.
 6. **Første produkt:** artikkel, kort forklaring eller film, og hvorfor.
 
 Et lesbart dokument, et stort beløp eller et kjent navn er ikke en sak alene.
+Manglende fulltekst er et tilgangsgap, ikke bevis på manglende dekning.
+Hastende kildebevaring eller et tidlig innsyn med lang behandlingstid kan gjøres
+før kontrollen er ferdig; begrunn behovet og det uavklarte nyhetsbidraget i saken.
 
 ## Tre beslutninger
 
@@ -110,3 +123,30 @@ artikkelkontrollen leser fortsatt de avgjørende originalkildene.
 - Publisere offentlig før eieren har etablert lansering og redaktør etter loven.
 - Sende høringssvar eller forslag til politikere eller organer, eller søke politisk
   støtte, uten eierens policymandat (RETNING.md).
+
+## Publiseringsklar overlevering, 4. november 2026
+
+Eieren har etablert Anders Lunde som ansvarlig redaktør og
+`lunde.anders@gmail.com` som offentlig kontakt, og bestilt automatisk oppdatering
+av https://ki-avisa.pages.dev/ når innhold er klart. Vanlig research og et
+artikkelutkast er ikke en publiseringsbeslutning. Først etter faktisk kontroll,
+nødvendig imøtegåelse og KI-redaktørens dokumenterte beslutning klargjøres de
+bevisst offentlige artikkelfeltene i nettstedets `content/`, med korrekt
+publiseringsstatus og de faktiske beslutningsmetadataene. Ingen rå e-post,
+privat kildeidentitet eller internt notat skal inngå.
+
+Gjennomgå offentlig eksport og kjør deretter `v5/sites/innsyn/publish.py prepare
+--reviewed-by <faktisk kontrollør>` med eksisterende AgentHouse-Python; se
+`docs/HOSTING.md`. Det kreves ingen ny eiergodkjenning per sak. Den separate,
+aktive monitoren kjører kun `publish.py run` hver 6. time og kan ikke gi
+godkjenning eller endre artikkelstatus. Kall ikke saken faktisk publisert før
+en vellykket utrullingskvittering foreligger. Bevar den private saksbeslutningen.
+
+## Eierinstruks 6. november 2026: sammendrag og rettelser
+
+- Alle publiserte artikler skal ha et kort KI-sammendrag øverst, med 3–4 punkter i feltet `summary` i artikkel-JSON. Hvert punkt skal være dekket av brødteksten. Sammendraget skal ikke ha egne påstander eller tall som ikke står i artikkelen. Byggeren avviser publiserte artikler uten sammendrag.
+- Til og med 4. desember 2026 føres endringer i publiserte artikler **ikke** i den offentlige listen «Endringer og rettelser» (`updates`), fordi nettstedet ennå ikke har lesere. Endringene skal fortsatt kontrolleres og føres privat i sakens `editorial_review.md`. Vurder praksisen på nytt etter datoen eller når nettstedet får lesere.
+
+## Eierinstruks 6. november 2026: hvem skriver
+
+Opus 5.5 skriver alt leserne skal lese: artikler, retting av artikler, videomanus, YouTube-tekster og sammendrag. GPT brukes til research, datainnhenting, dokumentlesing, kontroll og verify. Det er fast standard for avisa. Modellene settes i kanalfilen (`agent.article`, `agent.first_draft`, `agent.draft_editorial_revise`, `agent.media_matched_rewrite`, `agent.youtube_packaging` og `agent.shorts_first_draft` → `innsyn_opus_xhigh`), ikke i oppgavetekster. Når en organisator selv skriver eller redigerer leserrettet tekst, skal det være en Opus-økt, ikke en GPT-agent via `codex exec`.

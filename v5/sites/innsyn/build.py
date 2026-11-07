@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
+BASE = 'https://ki-avisa.pages.dev/'
 PROVIDERS = {'gemini': 'Google Gemini', 'speechify': 'Speechify'}
 LISTENING = {'awaiting_human_listening': 'Ikke lyttevurdert ennå', 'selected_for_channel': 'Valgt som fast kanalstemme'}
 
@@ -28,7 +29,7 @@ def url(value: str) -> str:
     return esc(value)
 
 
-def page(title: str, body: str, preview: bool, voices: bool, current: str = '') -> str:
+def page(title: str, body: str, preview: bool, voices: bool, current: str = '', article: dict | None = None) -> str:
     banner = '<div class="preview"><div class="wrap"><span>Privat prøveutgave</span><span>Arbeidstittel · Under utvikling</span></div></div>' if preview else ''
     links = [('index.html', 'Forsiden'), ('index.html#saker', 'Saker'), ('om.html', 'Slik jobber vi')]
     def nav_link(href: str, label: str) -> str:
@@ -42,7 +43,19 @@ def page(title: str, body: str, preview: bool, voices: bool, current: str = '') 
             owner += nav_link('stemmer.html', 'Stemmeprøver')
         owner += '</div>'
     script = '<script src="voices.js" defer></script>' if current == 'stemmer.html' else ''
-    return f'''<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>{esc(title)} · KI-avisa</title><meta name="description" content="Uavhengig norsk journalistikk om makt, penger og samfunnsdebatter.">{'<meta name="robots" content="noindex,nofollow">' if preview else ''}<link rel="stylesheet" href="style.css">{script}</head><body><a class="skip" href="#main">Hopp til innhold</a>{banner}<div class="wrap"><header class="site-header"><div class="masthead"><a class="brand" href="index.html" aria-label="KI-avisa, forsiden">ki-avisa<i>.</i></a><p>Vi undersøker makten,<br>følger pengene og forklarer.</p><span class="edition">Undersøkende<br>journalistikk</span></div><nav class="nav" aria-label="Hovedmeny"><div class="reader-nav">{navigation}</div>{owner}</nav></header><main id="main">{body}</main><footer class="footer"><a class="footer-brand" href="index.html">ki-avisa.</a><p>Journalistikk fra KI-redaksjonen.<br>Eier: Anders Lunde.</p><div><a href="om.html#metode">Metode og ansvar</a><a href="om.html#rettelser">Rettelser</a></div></footer></div></body></html>'''
+    description = article['deck'] if article else ('Slik arbeider KI-avisa med kilder, faktakontroll, KI og rettelser. Ansvarlig redaktør: Anders Lunde.' if current == 'om.html' else 'KI-avisa undersøker makt, følger offentlige penger og forklarer samfunnsdebatten, med synlige kilder og rettelser.')
+    description = ' '.join(description.split())[:160]
+    canonical = BASE + ('' if current in {'', 'index.html'} else current.removesuffix('.html'))
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'NewsMediaOrganization', '@id': BASE + '#organization', 'name': 'KI-avisa', 'url': BASE, 'logo': BASE + 'apple-touch-icon.png', 'email': 'lunde.anders@gmail.com'},
+        {'@type': 'WebSite', '@id': BASE + '#website', 'name': 'KI-avisa', 'url': BASE, 'inLanguage': 'nb-NO', 'publisher': {'@id': BASE + '#organization'}},
+        {'@type': 'WebPage', '@id': canonical, 'url': canonical, 'name': title + ' · KI-avisa', 'description': description, 'inLanguage': 'nb-NO', 'isPartOf': {'@id': BASE + '#website'}},
+    ]}
+    if article:
+        schema['@graph'].append({'@type': 'NewsArticle' if article['kind'] != 'Metode' else 'Article', 'headline': article['title'], 'description': description, 'mainEntityOfPage': canonical, 'datePublished': article['date'], 'author': {'@type': 'Organization', 'name': 'KI-avisas KI-redaksjon', 'url': BASE + 'om#ki'}, 'publisher': {'@id': BASE + '#organization'}, 'inLanguage': 'nb-NO'})
+    seo = '<meta name="robots" content="noindex,nofollow">' if preview else '<meta name="robots" content="noindex,follow">' if current == '404.html' else (
+        f'<link rel="canonical" href="{canonical}"><meta property="og:type" content="{"article" if article else "website"}"><meta property="og:site_name" content="KI-avisa"><meta property="og:locale" content="nb_NO"><meta property="og:url" content="{canonical}"><meta property="og:title" content="{esc(title)} · KI-avisa"><meta property="og:description" content="{esc(description)}"><meta property="og:image" content="{BASE}social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="KI-avisa. Makt. Penger. Dokumentasjon."><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>')
+    return f'''<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>{esc(title)} · KI-avisa</title><meta name="description" content="{esc(description)}">{seo}<meta name="theme-color" content="#23312f"><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" type="image/png" sizes="48x48"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="style.css">{script}</head><body><a class="skip" href="#main">Hopp til innhold</a>{banner}<div class="wrap"><header class="site-header"><div class="masthead"><a class="brand" href="index.html" aria-label="KI-avisa, forsiden">ki-avisa<i>.</i></a><p>Vi undersøker makten,<br>følger pengene og forklarer.</p><span class="edition">Undersøkende<br>journalistikk</span></div><nav class="nav" aria-label="Hovedmeny"><div class="reader-nav">{navigation}</div>{owner}</nav></header><main id="main">{body}</main><footer class="footer"><a class="footer-brand" href="index.html">ki-avisa.</a><p>Ansvarlig redaktør og eier: Anders Lunde.<br><a href="mailto:lunde.anders@gmail.com">lunde.anders@gmail.com</a></p><div><a href="om.html#metode">Metode og ansvar</a><a href="om.html#rettelser">Kontakt og rettelser</a></div></footer></div></body></html>'''
 
 
 def draft_badge(article: dict) -> str:
@@ -63,9 +76,86 @@ def sourced_text(value: str, source_count: int, references: dict[int, int] | Non
     return re.sub(r'\[(\d+)\]', reference, esc(value))
 
 
+def valid_summary(article: dict) -> bool:
+    """A published article needs 2–5 short summary points (owner's requirement, 6.11.2026)."""
+    points = article.get('summary')
+    return (isinstance(points, list) and 2 <= len(points) <= 5
+            and all(isinstance(p, str) and 0 < len(p.strip()) <= 260 for p in points))
+
+
+def summary_html(article: dict) -> str:
+    points = article.get('summary')
+    if not isinstance(points, list) or not points:
+        return ''
+    items = ''.join(f'<li>{esc(p)}</li>' for p in points)
+    return (f'<aside class="ai-summary" aria-label="Kort oppsummert"><p class="ai-summary-label">Kort oppsummert</p>'
+            f'<ul>{items}</ul><p class="ai-summary-note">Sammendraget er laget med KI og kontrollert mot artikkelen.</p></aside>')
+
+
+SAFE_FILE = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\.(?:svg|jpg|jpeg|png|webp|mp4|vtt)')
+
+
+def film_files(article: dict) -> list[str]:
+    film = article.get('film') or {}
+    return [f for f in (film.get('file'), film.get('captions'), film.get('poster')) if f]
+
+
+def film_html(article: dict) -> str:
+    """Self-hosted film (CSP media-src 'self'), with captions and visible credits."""
+    film = article.get('film')
+    if not film:
+        return ''
+    for name in film_files(article):
+        if not SAFE_FILE.fullmatch(name):
+            raise ValueError(f'Invalid film file name: {name!r}')
+    if not (film.get('file', '').endswith('.mp4') and film.get('caption') and film.get('credit')):
+        raise ValueError('Film needs an .mp4 file, caption and credit')
+    base = f'media/{article["slug"]}/'
+    poster = f' poster="{base}{film["poster"]}"' if film.get('poster') else ''
+    track = f'<track kind="captions" srclang="nb" label="Norsk" src="{base}{film["captions"]}" default>' if film.get('captions') else ''
+    return (f'<figure class="film"><video controls preload="metadata" playsinline{poster} src="{base}{film["file"]}">{track}'
+            f'Nettleseren din kan ikke vise videoen.</video><figcaption>{esc(film["caption"])}'
+            f'<span class="credit">{esc(film["credit"])}</span></figcaption></figure>')
+
+
+def figure_html(figure: dict) -> str:
+    """Inline one of our own SVG graphics. The site CSP forbids inline styles and scripts."""
+    name = figure.get('file', '')
+    if not SAFE_FILE.fullmatch(name) or not name.endswith('.svg'):
+        raise ValueError(f'Invalid graphic file name: {name!r}')
+    svg = (HERE / 'graphics' / name).read_text(encoding='utf-8')
+    if re.search(r'<script|<style|\sstyle=|\son[a-z]+=|<foreignObject|(?:xlink:)?href=|<image', svg, re.I):
+        raise ValueError(f'Graphic contains scripts, styles, links or images: {name}')
+    svg = re.sub(r'^\s*<\?xml[^>]*\?>', '', svg).strip()
+    if not (figure.get('alt') and figure.get('caption')):
+        raise ValueError(f'Graphic needs alt text and caption: {name}')
+    return (f'<figure class="graphic"><div class="graphic-svg" role="img" aria-label="{esc(figure["alt"])}">{svg}</div>'
+            f'<figcaption>{esc(figure["caption"])}</figcaption></figure>')
+
+
+def gallery_html(article: dict) -> str:
+    items = article.get('gallery') or []
+    if not items:
+        return ''
+    cells = ''
+    for item in items:
+        name = item.get('file', '')
+        if not SAFE_FILE.fullmatch(name) or name.endswith('.svg'):
+            raise ValueError(f'Invalid gallery file name: {name!r}')
+        if not all(item.get(k) for k in ('alt', 'caption', 'credit', 'license', 'source_url')):
+            raise ValueError(f'Gallery image lacks alt, caption, credit, license or source: {name}')
+        licence = esc(item['license'])
+        if item.get('license_url'):
+            licence = f'<a href="{url(item["license_url"])}" rel="noreferrer license">{licence}</a>'
+        cells += (f'<figure><img src="media/{article["slug"]}/{name}" alt="{esc(item["alt"])}" loading="lazy" decoding="async">'
+                  f'<figcaption>{esc(item["caption"])}<span class="credit">Foto: {esc(item["credit"])} · {licence} · '
+                  f'<a href="{url(item["source_url"])}" rel="noreferrer">kilde</a></span></figcaption></figure>')
+    return f'<section id="bilder" class="gallery"><p class="eyebrow">Bilder</p><h2>{esc(article.get('gallery_heading') or 'Bilder til saken')}</h2><div class="gallery-grid">{cells}</div></section>'
+
+
 def article_html(article: dict) -> str:
     references: dict[int, int] = {}
-    content = ''.join(f'<section id="avsnitt-{i}"><h2>{esc(s["heading"])}</h2>' + ''.join(f'<p>{sourced_text(p, len(article["sources"]), references)}</p>' for p in s['paragraphs']) + '</section>' for i, s in enumerate(article['sections'], 1))
+    content = ''.join(f'<section id="avsnitt-{i}"><h2>{esc(s["heading"])}</h2>' + ''.join(f'<p>{sourced_text(p, len(article["sources"]), references)}</p>' for p in s['paragraphs']) + (figure_html(s['figure']) if s.get('figure') else '') + '</section>' for i, s in enumerate(article['sections'], 1))
     sources = ''
     for number, source in enumerate(article['sources'], 1):
         backlinks = ''.join(f'<a href="#henvisning-{number}-{i}" aria-label="Tilbake til henvisning {i} til kilde {number}">↩ {i}</a>' for i in range(1, references.get(number, 0) + 1))
@@ -80,7 +170,7 @@ def article_html(article: dict) -> str:
         if not re.fullmatch(r'[A-Za-z0-9_-]{11}', article['youtube_id']):
             raise ValueError('Invalid verified YouTube video ID')
         video = f'<iframe src="https://www.youtube-nocookie.com/embed/{article["youtube_id"]}" title="Se filmen" loading="lazy" allowfullscreen></iframe>'
-    return f'<article class="reading"><header class="article-head"><a class="back" href="index.html">← Forsiden</a><p class="eyebrow">{esc(article["kind"])}</p><h1>{esc(article["title"])}</h1><p class="deck">{esc(article["deck"])}</p><div class="byline"><span>Av KI-avisas KI-redaksjon</span><time datetime="{esc(article["date"])}">{esc(article["date"])}</time>{draft_badge(article)}</div>{notice}<nav class="evidence-nav" aria-label="Dokumentasjon"><a href="#kilder">{len(article["sources"])} {"kilde" if len(article["sources"]) == 1 else "kilder"} ↓</a><a href="#endringer">Endringer og rettelser ↓</a><a href="om.html#ki">Om KI-redaksjonen ↗</a></nav></header><div class="reading-layout"><nav class="contents" aria-label="I denne teksten"><p>I denne teksten</p><ol>{contents}</ol><a href="#kilder">Kilder</a><a href="#endringer">Endringer og rettelser</a></nav><div class="article-body">{video}{content}<section id="kilder" class="sources"><p class="eyebrow">Dokumentasjon</p><h2>Kilder til teksten</h2><ol>{sources}</ol></section><section id="endringer" class="changes"><h2>Endringer og rettelser</h2>{updates}<a href="om.html#rettelser">Slik håndterer vi rettelser →</a></section><a class="back-to-top" href="#main">Til toppen ↑</a></div></div></article>'
+    return f'<article class="reading"><header class="article-head"><a class="back" href="index.html">← Forsiden</a><p class="eyebrow">{esc(article["kind"])}</p><h1>{esc(article["title"])}</h1><p class="deck">{esc(article["deck"])}</p><div class="byline"><span>Av KI-avisas KI-redaksjon</span><time datetime="{esc(article["date"])}">{esc(article["date"])}</time>{draft_badge(article)}</div>{notice}{summary_html(article)}<nav class="evidence-nav" aria-label="Dokumentasjon"><a href="#kilder">{len(article["sources"])} {"kilde" if len(article["sources"]) == 1 else "kilder"} ↓</a><a href="#endringer">Endringer og rettelser ↓</a><a href="om.html#ki">Om KI-redaksjonen ↗</a></nav></header><div class="reading-layout"><nav class="contents" aria-label="I denne teksten"><p>I denne teksten</p><ol>{contents}</ol><a href="#kilder">Kilder</a><a href="#endringer">Endringer og rettelser</a></nav><div class="article-body">{video}{film_html(article)}{content}{gallery_html(article)}<section id="kilder" class="sources"><p class="eyebrow">Dokumentasjon</p><h2>Kilder til teksten</h2><ol>{sources}</ol></section><section id="endringer" class="changes"><h2>Endringer og rettelser</h2>{updates}<a href="om.html#rettelser">Slik håndterer vi rettelser →</a></section><a class="back-to-top" href="#main">Til toppen ↑</a></div></div></article>'
 
 
 def story_rows(articles: list[dict]) -> str:
@@ -118,7 +208,7 @@ def home_html(articles: list[dict], preview: bool) -> str:
     )
 
 
-ABOUT = '<article class="article about"><p class="eyebrow">Slik jobber vi</p><h1>Spørsmål som fortjener ordentlige svar.</h1><p class="deck">KI-avisa er et norsk journalistikkprosjekt under utvikling. KI-redaksjonen undersøker sakene og lager journalistikken. Anders Lunde er eier. Han eier også KI-partiet, et separat prosjekt for politikkutvikling. KI-avisa bruker samme journalistiske beviskrav overfor alle aktører, også KI-partiet.</p>\n<nav class="evidence-nav" aria-label="Om redaksjonen"><a href="#metode">Metode ↓</a><a href="#ki">KI og ansvar ↓</a><a href="#rettelser">Rettelser ↓</a></nav>\n<h2>Hva vi dekker</h2><p>Gravende saker om korrupsjon, lovbrudd, habilitet og sløsing med offentlige penger. Saker om makt, politi og rettsvesen der dokumentene kan etterprøves. Og forklaringer av debattene som preger norsk politikk, som strømpris, oljepenger, formuesskatt, energi og innvandring.</p>\n<h2>Samme metode, uansett parti</h2><p>Alle partier og personer møter samme dokumentasjonskrav. Hvor mye plass en sak får, avgjøres av betydning og belegg. I forklaringssaker skiller vi mellom hva dataene viser, hvilke forklaringer som har støtte, og hvilke valg som fortsatt er politiske.</p>\n<h2 id="metode">En metode du kan etterprøve</h2><p>Vi kontrollerer originalkilder, prøver alternative forklaringer og skiller mellom det som er dokumentert, det som er påstått og det som er vår vurdering. Personer, virksomheter og offentlige organer som får sterke faktiske beskyldninger mot seg, får en reell mulighet til å svare før saken publiseres. Er vi i tvil om en omtale krever det, spør vi heller én gang for mye enn én gang for lite.</p><p>Ved sentrale påstander viser artiklene til den konkrete kilden. Vi oppgir perioden tallene gjelder, forklarer viktige beregninger og sier hva materialet ikke kan fortelle. Vi krediterer andre mediers arbeid og skiller egne funn fra videreformidling. Artiklene skal kunne leses uavhengig av filmene, og kan komme før eller uten en film. En kort dokumentert sak trenger ikke bli en lang video.</p>\n<h2 id="ki">KI-journalister. Åpent ansvar.</h2><p>KI-redaksjonen finner og avgrenser saker, undersøker dokumenter og data, sender innsynskrav, kontakter berørte og følger opp svar. Den skriver artiklene, produserer filmene og kvalitetssikrer journalistikken. Eieren fastsetter mandatet; KI-redaktøren dokumenterer de redaksjonelle beslutningene innenfor dette mandatet. KI-modeller kan ta feil, også med kilder og tall. Derfor kontrolleres sentrale påstander mot originalen i en egen faktasjekk, og feil retter vi synlig.</p><p>Vi opplyser om KI-avsender i journalistiske henvendelser og bruker syntetisk fortellerstemme. Illustrasjoner merkes og er aldri dokumentasjon av hva noen faktisk har gjort. Private kildearkiver og korrespondanse publiseres ikke.</p>\n<h2 id="rettelser">Feil skal rettes synlig</h2><p>Meningsbærende endringer skal stå i artikkelens endringshistorikk, med dato og forklaring på hva som ble rettet og hvorfor. Vesentlige feil følges opp også i videoomtale og, ved behov, selve filmen.</p><p>En offentlig kontaktadresse og trygg tipskanal er ikke etablert ennå. Denne private prøveutgaven tar ikke imot tips eller personopplysninger, og vi kan foreløpig ikke love noen fortrolighet. Kontaktveien og ansvaret for offentlig utgivelse skal være tydelig før lansering.</p>\n<h2>En prøveutgave, under utvikling</h2><p>KI-avisa er en arbeidstittel. Offentlig kanalidentitet og YouTube-kanal er ikke avklart. Norsk lov krever at en fysisk person er redaktør, med navn og kontaktopplysninger synlige for publikum; hvem det blir, avklares før lansering. Metodeutkastene beskriver oppdraget; de er ikke ferdige undersøkelser. Publiserte saker vil få sin egen dokumentasjon og endringshistorikk.</p>\n<div class="sources"><h2>Redaksjonelt utgangspunkt</h2><p>Metoden bygger på <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten hos Norsk Presseforbund</a>. Det innebærer ikke en påstand om medlemskap, PFU-tilknytning eller presseakkreditering.</p></div></article>'
+ABOUT = '<article class="article about"><p class="eyebrow">Slik jobber vi</p><h1>Spørsmål som fortjener ordentlige svar.</h1>\n<p class="deck">KI-avisa er et norsk journalistikkprosjekt. KI-redaksjonen undersøker sakene og lager journalistikken. Anders Lunde er ansvarlig redaktør og eier. Han eier også KI-partiet, et separat prosjekt for politikkutvikling. KI-avisa bruker samme journalistiske beviskrav overfor alle aktører, også KI-partiet.</p>\n<nav class="evidence-nav" aria-label="Om redaksjonen"><a href="#metode">Metode ↓</a><a href="#ki">KI og ansvar ↓</a><a href="#rettelser">Kontakt og rettelser ↓</a><a href="#personvern">Personvern ↓</a></nav>\n<h2>Hva vi dekker</h2><p>Gravende saker om korrupsjon, lovbrudd, habilitet og sløsing med offentlige penger. Saker om makt, politi og rettsvesen der dokumentene kan etterprøves. Og forklaringer av debattene som preger norsk politikk, som strømpris, oljepenger, formuesskatt, energi og innvandring.</p>\n<h2>Samme metode, uansett parti</h2><p>Alle partier og personer møter samme dokumentasjonskrav. Hvor mye plass en sak får, avgjøres av betydning og belegg. I forklaringssaker skiller vi mellom hva dataene viser, hvilke forklaringer som har støtte, og hvilke valg som fortsatt er politiske.</p>\n<h2 id="metode">En metode du kan etterprøve</h2><p>Vi kontrollerer originalkilder, prøver alternative forklaringer og skiller mellom det som er dokumentert, det som er påstått og det som er vår vurdering. Personer, virksomheter og offentlige organer som får sterke faktiske beskyldninger mot seg, får en reell mulighet til å svare før saken publiseres.</p><p>Ved sentrale påstander skal artiklene vise til den konkrete kilden, oppgi perioden tallene gjelder og forklare viktige beregninger og begrensninger. Vi krediterer andre mediers arbeid. Artiklene kan leses uten en film.</p>\n<h2 id="ki">KI-journalister. Åpent ansvar.</h2><p>KI-redaksjonen finner og avgrenser saker, undersøker dokumenter og data, sender innsynskrav, kontakter berørte og følger opp svar. Den skriver artiklene og utarbeider filmene. KI kan ta feil, også med kilder og tall. Derfor skal sentrale påstander kontrolleres mot originalen, og feil rettes synlig.</p><p>Anders Lunde er ansvarlig redaktør. KI-redaktøren utfører og dokumenterer redaksjonelt arbeid innenfor mandatet; den er ikke en fysisk person og erstatter ikke den ansvarlige redaktøren. Eieren har bekreftet redaktør og offentlig kontakt 4. november 2026.</p><p>Vi opplyser om KI-avsender i journalistiske henvendelser og bruker syntetisk fortellerstemme. Illustrasjoner merkes og er aldri dokumentasjon av hva noen faktisk har gjort. Private kildearkiver og korrespondanse publiseres ikke.</p>\n<h2 id="rettelser">Kontakt og synlige rettelser</h2><p>Ansvarlig redaktør og eier: <strong>Anders Lunde</strong>.<br>Offentlig kontakt: <a href="mailto:lunde.anders@gmail.com">lunde.anders@gmail.com</a>.</p><p>Oppgi hvilken side og opplysning en rettelse gjelder. Meningsbærende endringer skal stå i artikkelens endringshistorikk, med dato og forklaring. Vesentlige feil følges opp også i eventuelle filmer.</p><p>Vanlig e-post er ikke en sikker tipskanal. Avtal en egnet kontaktmåte før du sender fortrolige eller sensitive opplysninger.</p>\n<h2>Felles eier med KI-partiet</h2><p>Anders Lunde eier både KI-avisa og <a href="https://ki-partiet.pages.dev/">KI-partiet</a>. KI-partiet utvikler politikk; KI-avisa driver journalistikk etter eget mandat. Felles eierskap er en binding leserne skal kjenne til. Journalistiske konklusjoner skal ikke tilpasses det politiske prosjektets forslag. Private kilder og korrespondanse overføres ikke til KI-partiet.</p>\n<h2 id="personvern">Personvern på nettstedet</h2><p>Nettstedet bruker ingen analyseverktøy, sporingsskript, kontaktskjemaer eller eksterne skrifter. Cloudflare leverer sidene og kan behandle tekniske tilkoblingsopplysninger for drift og sikkerhet. E-postlenker åpner e-postprogrammet ditt. Dersom en artikkel senere inneholder en YouTube-film, kan avspilling gi YouTube opplysninger om tilkoblingen din.</p>\n<h2>Et nettsted under utvikling</h2><p>Bare ferdig publiserte artikler med dokumentert redaksjonell beslutning skal vises her. Utkast, stemmeprøver og interne arbeidsoversikter er ikke en del av det offentlige nettstedet.</p>\n<div class="sources"><h2>Redaksjonelt utgangspunkt</h2><p>Metoden bygger på <a href="https://www.presse.no/vaer-varsom-plakaten">Vær Varsom-plakaten hos Norsk Presseforbund</a>. Det innebærer ingen påstand om medlemskap, PFU-tilknytning eller presseakkreditering.</p></div></article>'
 
 
 def seconds(value: float) -> str:
@@ -234,7 +324,9 @@ def auditions(root: Path, output: Path) -> tuple[str, dict | None]:
     return text_html, voice_choice
 
 
-def build(preview: bool, audition_root: Path | None) -> dict:
+def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') -> dict:
+    if output_name not in {'dist', 'public'} or (preview and output_name == 'public'):
+        raise ValueError('Public output requires public mode; output must be dist or public')
     if audition_root and not preview:
         raise ValueError('Voice auditions are internal: require --preview')
     articles = []
@@ -246,10 +338,12 @@ def build(preview: bool, audition_root: Path | None) -> dict:
             continue
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', article['slug']):
             raise ValueError(f'Invalid article slug in {file}')
-        if article['slug'] in {'index', 'om', 'stemmer', 'redaksjonen'}:
+        if article['slug'] in {'index', 'om', 'stemmer', 'redaksjonen', '404'}:
             raise ValueError(f'Reserved article slug in {file}')
         if article['status'] == 'published' and not (article.get('approved_by') and article.get('approved_at')):
             raise ValueError(f'Published article lacks recorded editorial decision: {file}')
+        if article['status'] == 'published' and article['kind'] != 'Metode' and not valid_summary(article):
+            raise ValueError(f'Published article needs a summary of 2-5 short points: {file}')
         if not article['sections'] or not article['sources']:
             raise ValueError(f'Article requires actual body and sources: {file}')
         articles.append(article)
@@ -260,9 +354,16 @@ def build(preview: bool, audition_root: Path | None) -> dict:
         output = Path(temporary) / 'dist'
         output.mkdir()
         shutil.copyfile(HERE / 'style.css', output / 'style.css')
+        for name in ['icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png']:
+            shutil.copyfile(HERE / 'assets' / name, output / name)
         for article in articles:
-            (output / f'{article["slug"]}.html').write_text(page(article['title'], article_html(article), preview, voices), encoding='utf-8')
-        (output / 'index.html').write_text(page('Uavhengig norsk journalistikk', home_html(articles, preview), preview, voices, 'index.html'), encoding='utf-8')
+            media_files = [item['file'] for item in article.get('gallery') or []] + film_files(article)
+            if media_files:
+                (output / 'media' / article['slug']).mkdir(parents=True, exist_ok=True)
+                for name in media_files:
+                    shutil.copyfile(HERE / 'media' / article['slug'] / name, output / 'media' / article['slug'] / name)
+            (output / f'{article["slug"]}.html').write_text(page(article['title'], article_html(article), preview, voices, article['slug'] + '.html', article), encoding='utf-8')
+        (output / 'index.html').write_text(page('Norsk journalistikk', home_html(articles, preview), preview, voices, 'index.html'), encoding='utf-8')
         (output / 'om.html').write_text(page('Slik jobber vi', ABOUT, preview, voices, 'om.html'), encoding='utf-8')
         voice_count = 0
         voice_choice = None
@@ -274,9 +375,15 @@ def build(preview: bool, audition_root: Path | None) -> dict:
             voice_count = len(list((output / 'audio').glob('*.wav')))
         if preview:
             (output / 'redaksjonen.html').write_text(page('Redaksjonen', newsroom_html(articles, voice_count, voice_choice), True, voices, 'redaksjonen.html'), encoding='utf-8')
-        (output / 'robots.txt').write_text('User-agent: *\nDisallow: /\n' if preview else 'User-agent: *\nAllow: /\n', encoding='utf-8')
-        dist = HERE / 'dist'
-        if dist.is_symlink() or dist.resolve() != HERE.resolve() / 'dist':
+        (output / 'robots.txt').write_text('User-agent: *\nDisallow: /\n' if preview else f'User-agent: *\nAllow: /\nSitemap: {BASE}sitemap.xml\n', encoding='utf-8')
+        if not preview:
+            (output / '404.html').write_text(page('Siden finnes ikke', '<article class="article"><p class="eyebrow">404</p><h1>Siden finnes ikke.</h1><p>Adressen kan være feil, eller siden er flyttet.</p><a class="read" href="index.html">Til forsiden →</a></article>', False, False, '404.html'), encoding='utf-8')
+            (output / '_headers').write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; frame-ancestors 'none'; form-action 'none'\n", encoding='utf-8')
+            pages = ['index.html', 'om.html'] + [f'{a["slug"]}.html' for a in articles]
+            sitemap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{"" if name == "index.html" else name.removesuffix(".html")}</loc></url>' for name in pages) + '</urlset>'
+            (output / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+        dist = HERE / output_name
+        if dist.is_symlink() or dist.resolve() != HERE.resolve() / output_name:
             raise ValueError('Refusing unexpected build output target')
         if dist.exists():
             shutil.rmtree(dist)
@@ -288,8 +395,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--preview', action='store_true')
     parser.add_argument('--auditions', type=Path)
+    parser.add_argument('--output', choices=('dist', 'public'), default='dist')
     args = parser.parse_args()
     try:
-        print(json.dumps(build(args.preview, args.auditions.resolve() if args.auditions else None), ensure_ascii=False))
+        print(json.dumps(build(args.preview, args.auditions.resolve() if args.auditions else None, args.output), ensure_ascii=False))
     except (OSError, ValueError, KeyError, TypeError) as exc:
         parser.exit(1, f'innsyn site build: {exc}\n')

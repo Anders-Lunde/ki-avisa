@@ -19,22 +19,32 @@ planleggingsgrunnlag, ikke som bevis. <<EPISODE_CONTEXT>>
    riktig resultat. Krever bestillingen et sluttpunkt (sluttregnskap, avgjørelse, dom),
    ikke bytt det ut med en prognose eller et utkast uten å si at verdien for leseren
    da endres.
-2. **Les de avgjørende originalene.** Bevar URL, utgiver, dokument/dato, side/tabell,
+2. **Kontroller dekningen før vanlig dokumentjakt og kontakt.** Les sakens
+   «Dekningskontroll». Mangler den, søk målrettet på bestillingens konkrete
+   spørsmål og konsekvenser og les de nærmeste relevante originalsakene.
+   Før søk, faktisk lest omfang, tilgangsgap, allerede dokumenterte opplysninger
+   og et konkret eget bidrag i `editorial_review.md`. En plan om mer detaljert
+   research er ikke nok. Revider bestillingen eller parker hvis den tiltenkte
+   vinkelen allerede er dekket og en egen etterprøving/oppdatering ikke er
+   begrunnet. Manglende fulltekst beviser ikke at vinkelen er udekket. Et
+   nødvendig tidlig innsyn eller hastende kildebevaring kan gå først bare med
+   konkret begrunnelse i saken; fullfør dekningskontrollen før skrivebestilling.
+3. **Les de avgjørende originalene.** Bevar URL, utgiver, dokument/dato, side/tabell,
    hentetid, lokal fil og tilgangsstatus i `sources.md` etter KILDER.md. Bruk
    eksisterende v5-ferdigheter for nedlasting, PDF og data. Skill metadata fra lest
    innhold.
-3. **Send nødvendige henvendelser tidlig,** etter DRIFT.md og malene i
+4. **Send nødvendige henvendelser tidlig,** etter DRIFT.md og malene i
    `v5/docs/innsyn/templates/`, når saken trenger dokumenter eller forklaring. Er
    Gmail-verktøyene ikke tilgjengelige i denne økten, klargjør henvendelsen med
    `journalism_desk request-prepare`, før mangelen i `reporting.md` og overlever
    den eksakte utsendingen til økten som startet oppgaven. Ikke send på nytt det som
    allerede er sendt; les tråden først.
-4. **Regn reproduserbart.** Legg inndata, et lite kjørbart skript og resultatet i
+5. **Regn reproduserbart.** Legg inndata, et lite kjørbart skript og resultatet i
    `calculations/`. Sammenlikn bare samme enhet, prisnivå, mva.-grunnlag og omfang.
-5. **Oppdater saken.** `claims.md` skal også inneholde tolkninger, merket som
+6. **Oppdater saken.** `claims.md` skal også inneholde tolkninger, merket som
    tolkning, med det som støtter betydningen. `chronology.md`, `sources.md` og
    `editorial_review.md` oppdateres med daterte avsnitt; tidligere historikk bevares.
-6. **Skriv handoffen** som et datert avsnitt i `writer_handoff.md`. Filen leses av
+7. **Skriv handoffen** som et datert avsnitt i `writer_handoff.md`. Filen leses av
    forfatteren og skal ikke inneholde rå korrespondanse, adresser, meldings-ID-er
    eller private kvitteringer; vis til at de ligger i `reporting.md`. Struktur:
    - **Svaret så langt** i én til tre setninger, og hva som er nytt sammenliknet med

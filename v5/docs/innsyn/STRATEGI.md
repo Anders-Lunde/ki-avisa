@@ -2,6 +2,87 @@
 
 Oppdatert 4.11.2026: Prosjektnavnet er KI-avisa. Politikkutvikling er flyttet til KI-partiet; se [RETNING.md](RETNING.md) for felles eierskap og selvstendig journalistisk metode. Historiske omtaler av Innsyn gjelder samme saksarkiv.
 
+## Gjeldende utprøvingsretning – eierens presisering 4.11.2026
+
+KI-avisa skal prøve flere arbeidsmåter og utvikle det som faktisk gir leserne
+verdi. Egne undersøkelser, etterprøving, forklaringsjournalistikk, interaktive
+infografikksider og videoer kan alle være relevante. Andre arbeidsmåter kan
+også prøves. Dette er ingen låsing til én modell eller bestilling av en fast
+produksjonsmengde. Prioriteringsrekkefølgen i den eldre strategiteksten under
+er ikke lenger en obligatorisk rangering mellom disse arbeidsmåtene.
+
+Store saker fra offentlig tilgjengelig mediedekning kan velges når et konkret
+spørsmål er vanskelig å forstå uten en bedre fremstilling: størrelsesforhold,
+pengestrømmer, tidsforløp, geografiske forskjeller, mekanismer eller konsekvenser.
+Krediter journalistikken som fant saken og kontroller de avgjørende originalene.
+Eget bidrag kan være at leseren forstår sammenhengen eller kan undersøke et
+relevant spørsmål selv. Ny avsløring er ikke et krav. Popularitet og en pen
+grafikk alene begrunner likevel ikke en produksjon.
+
+Velg sak og format etter dokumentert leserbehov, kildegrunnlag, motbelegg,
+forventet forklaringsverdi og innsats. Prøv avgrenset før større produksjon.
+Vurder om fremstillingen faktisk besvarer spørsmålet, gjør forutsetningene
+forståelige og tåler faktakontroll; vurder publikumsbruk og tilbakemeldinger når
+slike faktisk foreligger. Ikke påstå publikumseffekt fra en privat prototype.
+Behold, endre eller avslutt forsøk ut fra resultatet, uten å holde svake spor
+i live på grunn av brukt tid eller allerede sendt kontakt.
+
+### Avgrensning etter dekningskontroll 5.11.2026
+
+Videre utvikling av den generelle budsjettprototypen er parkert. Kronekart og
+Fellestall dekker allerede oversikter, budsjettstadier og en rekke forklaringer
+av tallendringer. Fellestalls analyser går også inn i prisvekst, brukerantall,
+oppgaveflytting og enkelte tjenesteforslag. Flere valg i vår graf er ikke alene
+et tilstrekkelig leserbidrag.
+
+Det prioriterte neste forsøket er en forklaring som følger penger og beslutninger
+frem til kapasitet, faktisk tjeneste og konsekvens for innbyggerne. Velg ett
+presist spørsmål og vis hva de relevante målene betyr. Dette er et forsøk,
+ikke en ny binding av hele prosjektet til én sjanger.
+
+Et konkret manusspor er «Hvorfor vokser saksbunken selv om domstolene avgjør
+flere saker?», avgrenset til sivile tvistesaker i tingrettene i 2025. Premisset
+er kontrollert mot DAs årsrapport, trykt side 15. Fellestalls justisanalyse og
+Rett24s dekning av saksinngang/bemanning skal krediteres; dette er ikke et nytt
+tallfunn eller belegg for at budsjettene forårsaket utviklingen. Eget bidrag må
+være en tydelig forklaring av tilgangen, avviklingen, restansen og hva
+saksbehandlingstidsmålet faktisk beskriver.
+
+Første produkt vurderes som kort forklaring med én avstemt figur. Manus,
+definisjoner, sammenliknbarhet og konkret merverdi kommer før mer kode.
+Interaktivitet eller video bestilles bare når formen løser et dokumentert
+forståelsesproblem bedre enn tekst og en enkel figur. Parker også dette
+forsøket dersom kildene eller dekningskontrollen ikke støtter bidraget.
+Neste kildeavstemming er 5.11 etter ordinær svarkontroll; ingen produksjon
+eller nye henvendelser er automatisk bestilt. Detaljert beslutning og
+kildekvitteringer ligger i prosjektets private prototypemappe, i
+`direction_review_20261105.md`.
+
+### Første budsjettutprøving 4.11.2026 – bakgrunn
+
+**Utprøvingsspor: statsbudsjett og statsregnskap.** Start med ett konkret
+leserspørsmål og sammenlikn med eksisterende fremstillinger før prototype.
+DFØ tilbyr allerede grafiske oversikter, bevilgnings-/regnskapssammenlikning og
+råfiler: https://statsregnskapet.dfo.no/om-statsregnskapet og
+https://statsregnskapet.dfo.no/last-ned. Et mulig nyttig spørsmål er hva som
+skjer fra vedtatt ramme via endringer til faktisk regnskapsført beløp, med
+forklaring av hva avviket betyr. Avklar data og sammenliknbart omfang først.
+
+Offentlige innganger kontrollert 4.11: DFØ oppgir endelige tall for 2025 fra
+24.4.2026, og Finansdepartementets Gul bok-tallgrunnlag gjelder regjeringens
+forslag for 2027. Dette er forskjellige år og statuser. Hold forslag, vedtak,
+endret bevilgning, delårstall og årsregnskap tydelig adskilt; forklar enheter,
+prisnivå og eventuelt endret ansvars-/postomfang. Ingen sum eller egen
+beregning er etablert her. Lundefilms/AgentHouse er eierens referanser for
+fremstilling; nettsiden lundefilms.com lot seg ikke lese i webverktøyet i denne
+kontrollen, og ingen bestemt stil eller funksjon der kalles gjennomgått.
+
+Neste avgrensede vurdering: 5.11 etter ordinær svarkontroll, velg ett konkret
+budsjett-/regnskapsspørsmål og prøv nødvendige dataceller før eventuell lokal
+skisse. Dette er ikke en bestilling av film, publisering eller deploy.
+
+## Bakgrunn og tidligere strategivurdering
+
 Skrevet 31. oktober 2026 etter første sak. **Kort sagt: Innsyn skal bli kjent for
 å finne svaret i dokumentene og vise det.** En sak bestilles når vi kan si hvilket
 spørsmål leseren vil ha svar på, hva svaret kan bli, hva som er nytt og hvilken

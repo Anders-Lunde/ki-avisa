@@ -7,6 +7,7 @@ v5/skill_outputs/
 .env.*
 !.env.example
 .venv/
+.wrangler/
 __pycache__/
 *.pyc
 *.eml
@@ -15,6 +16,8 @@ __pycache__/
 v5/config/channels/*.yaml
 !v5/config/channels/*.example.yaml
 v5/sites/*/dist/
+v5/sites/*/public/
+v5/sites/*/media/
 v5/sites/*/preview/
 v5/sites/*/articles/
 v5/sites/*/content/

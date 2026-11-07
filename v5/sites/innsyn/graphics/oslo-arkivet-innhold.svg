@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 630" width="480" height="630" font-family="Arial, Helvetica, sans-serif">
+<title>Hva Oslo-arkivet inneholder</title>
+<rect width="480" height="630" fill="#fffdf7"/>
+<defs><pattern id="skr" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f6f3eb"/><path d="M0,0V6" stroke="#cbd0c5" stroke-width="2"/></pattern></defs>
+<rect x="3.0" y="3.0" width="474.0" height="140.0" fill="#58645e"/>
+<rect x="3.0" y="76.6" width="474.0" height="66.4" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="11.0" y="23.0" font-size="15" font-weight="700" fill="#ffffff">Avtalen og oppfølgingen</text>
+<text x="11.0" y="41.0" font-size="15" fill="#ffffff">sep.–des. 1993</text>
+<text x="11.0" y="61.0" font-size="19" font-weight="700" fill="#ffffff">26 %</text>
+<rect x="3.0" y="149.0" width="138.2" height="408.0" fill="#58645e"/>
+<rect x="3.0" y="377.5" width="138.2" height="179.5" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="11.0" y="169.0" font-size="12" font-weight="700" fill="#ffffff">Videre arbeid</text>
+<text x="11.0" y="184.0" font-size="12" fill="#ffffff">1994–1998</text>
+<text x="11.0" y="201.0" font-size="16" font-weight="700" fill="#ffffff">22 %</text>
+<rect x="147.2" y="149.0" width="329.8" height="121.0" fill="#58645e"/>
+<rect x="147.2" y="223.2" width="329.8" height="46.8" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="155.2" y="169.0" font-size="15" font-weight="700" fill="#ffffff">Trykksaker</text>
+<text x="155.2" y="187.0" font-size="15" fill="#ffffff">foto og visittkort</text>
+<text x="155.2" y="207.0" font-size="19" font-weight="700" fill="#ffffff">16 %</text>
+<rect x="147.2" y="276.1" width="102.8" height="280.9" fill="#a93828"/>
+<rect x="147.2" y="430.6" width="102.8" height="126.4" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="155.2" y="296.1" font-size="12" font-weight="700" fill="#ffffff">Veien til avtalen</text>
+<text x="155.2" y="311.1" font-size="12" fill="#ffffff">1993</text>
+<text x="155.2" y="328.1" font-size="16" font-weight="700" fill="#ffffff">12 %</text>
+<rect x="256.1" y="276.1" width="220.9" height="128.7" fill="url(#skr)" stroke="#58645e" stroke-width="1"/>
+<text x="264.1" y="296.1" font-size="15" font-weight="700" fill="#23312f">Opphavsrettsmerket</text>
+<text x="264.1" y="314.1" font-size="15" fill="#23312f">ikke avskrevet av oss</text>
+<text x="264.1" y="334.1" font-size="19" font-weight="700" fill="#23312f">11 %</text>
+<rect x="256.1" y="410.8" width="128.1" height="146.2" fill="#58645e"/>
+<rect x="256.1" y="516.1" width="128.1" height="40.9" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="264.1" y="430.8" font-size="12" font-weight="700" fill="#ffffff">Bakgrunn</text>
+<text x="264.1" y="445.8" font-size="12" fill="#ffffff">notatbøker</text>
+<text x="264.1" y="462.8" font-size="16" font-weight="700" fill="#ffffff">8 %</text>
+<rect x="390.2" y="410.8" width="86.8" height="146.2" fill="#58645e"/>
+<rect x="390.2" y="486.0" width="86.8" height="71.0" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="398.2" y="430.8" font-size="10.5" font-weight="700" fill="#ffffff">Forskning</text>
+<text x="398.2" y="444.3" font-size="10.5" fill="#ffffff">Waage-manus</text>
+<text x="398.2" y="459.8" font-size="14.5" font-weight="700" fill="#ffffff">5 %</text>
+<rect x="4" y="567" width="16" height="12" fill="#58645e"/><rect x="4" y="573" width="16" height="6" fill="#f6f3eb" fill-opacity="0.55"/>
+<text x="26" y="578" font-size="13" fill="#23312f">Lys del nederst: maskinelt klassifisert som blank side</text>
+<rect x="4" y="587" width="16" height="12" fill="url(#skr)" stroke="#58645e" stroke-width="1"/>
+<text x="26" y="598" font-size="13" fill="#23312f">Ikke avskrevet av KI-avisa (opphavsrettsmerkede mapper)</text>
+<text x="4" y="620" font-size="12" fill="#58645e">Areal = andel av 20 760 bildeposisjoner i 42 katalogmapper. Ikke dokumenttall.</text>
+</svg>

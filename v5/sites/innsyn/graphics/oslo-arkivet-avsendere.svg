@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 402" width="480" height="402" font-family="Arial, Helvetica, sans-serif">
+<title>Hvem skrev, og hvem fikk dokumentene</title>
+<rect width="480" height="402" fill="#fffdf7"/>
+<text x="8" y="24" font-size="14" font-weight="700" fill="#23312f">Flest dokumenter fra</text>
+<text x="200" y="49" font-size="13" fill="#23312f" text-anchor="end">Verdensbanken</text>
+<rect x="208" y="37" width="226.0" height="15" fill="#58645e"/>
+<text x="439.0" y="49" font-size="12.5" fill="#23312f">108</text>
+<text x="200" y="73" font-size="13" fill="#23312f" text-anchor="end">Fafo</text>
+<rect x="208" y="61" width="169.5" height="15" fill="#58645e"/>
+<text x="382.5" y="73" font-size="12.5" fill="#23312f">81</text>
+<text x="200" y="97" font-size="13" fill="#23312f" text-anchor="end">Utenriksdepartementet</text>
+<rect x="208" y="85" width="161.1" height="15" fill="#58645e"/>
+<text x="374.1" y="97" font-size="12.5" fill="#23312f">77</text>
+<text x="200" y="121" font-size="13" fill="#23312f" text-anchor="end">Mona Juul</text>
+<rect x="208" y="109" width="146.5" height="15" fill="#58645e"/>
+<text x="359.5" y="121" font-size="12.5" fill="#23312f">70</text>
+<text x="200" y="145" font-size="13" fill="#23312f" text-anchor="end">Johan Jørgen Holst</text>
+<rect x="208" y="133" width="142.3" height="15" fill="#58645e"/>
+<text x="355.3" y="145" font-size="12.5" fill="#23312f">68</text>
+<text x="200" y="169" font-size="13" fill="#23312f" text-anchor="end">Terje Rød-Larsen</text>
+<rect x="208" y="157" width="140.2" height="15" fill="#58645e"/>
+<text x="353.2" y="169" font-size="12.5" fill="#23312f">67</text>
+<text x="8" y="212" font-size="14" font-weight="700" fill="#23312f">Flest dokumenter til</text>
+<text x="200" y="237" font-size="13" fill="#23312f" text-anchor="end">Terje Rød-Larsen</text>
+<rect x="208" y="225" width="226.0" height="15" fill="#a93828"/>
+<text x="439.0" y="237" font-size="12.5" fill="#23312f">306</text>
+<text x="200" y="261" font-size="13" fill="#23312f" text-anchor="end">Utenriksdepartementet</text>
+<rect x="208" y="249" width="129.2" height="15" fill="#a93828"/>
+<text x="342.2" y="261" font-size="12.5" fill="#23312f">175</text>
+<text x="200" y="285" font-size="13" fill="#23312f" text-anchor="end">Johan Jørgen Holst</text>
+<rect x="208" y="273" width="37.7" height="15" fill="#a93828"/>
+<text x="250.7" y="285" font-size="12.5" fill="#23312f">51</text>
+<text x="200" y="309" font-size="13" fill="#23312f" text-anchor="end">AHLC</text>
+<rect x="208" y="297" width="35.5" height="15" fill="#a93828"/>
+<text x="248.5" y="309" font-size="12.5" fill="#23312f">48</text>
+<text x="200" y="333" font-size="13" fill="#23312f" text-anchor="end">Fafo</text>
+<rect x="208" y="321" width="31.8" height="15" fill="#a93828"/>
+<text x="244.8" y="333" font-size="12.5" fill="#23312f">43</text>
+<text x="8" y="392" font-size="11.5" fill="#58645e">Dokumenter med kjent avsender eller mottaker, norsk arkiv uten kopier.</text>
+</svg>

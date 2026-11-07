@@ -3,9 +3,12 @@
 Oppdatert 4.11.2026: Prosjektnavnet er KI-avisa. Politikkutvikling er flyttet til KI-partiet; se [RETNING.md](RETNING.md) for felles eierskap og selvstendig journalistisk metode. Historiske omtaler av Innsyn gjelder samme saksarkiv.
 
 Opprettet 31. oktober 2026 fra operatørens opptak kl. 13:53; revidert samme dag
-etter redaksjonell gjennomgang. «Innsyn» er arbeidstittel. Offentlig
-kanalidentitet, ansvarlig redaktør og kontaktadresse er ikke etablert. Bokmål
-er foreløpig standard.
+etter redaksjonell gjennomgang. Prosjektet heter nå KI-avisa. **Eierens
+beslutning 4. november 2026:** Anders Lunde er ansvarlig redaktør, og
+`lunde.anders@gmail.com` er offentlig kontaktadresse. Eieren bestilte at det
+eksisterende nettstedet publiseres på Cloudflare Pages uten private utkast
+eller internt materiale. Dette er ikke en beslutning om å publisere konkrete
+artikkelutkast eller en påstand om ekstern juridisk vurdering. Bokmål er standard.
 
 ## Oppdrag
 
@@ -128,6 +131,18 @@ hva som avkrefter saken, og første produkt. En sak er ikke prioritert bare ford
 den har en mappe. Krever bestillingen et sluttpunkt (sluttregnskap, avgjørelse,
 dom), velg et eksempel der sluttpunktet finnes, eller si åpent at en prognose
 eller et utkast gir leseren noe annet.
+
+Før en ordinær bestilling og utsending skal «Dekningskontroll» i saksbeslutningen
+vise målrettede søk på selve spørsmålet og konsekvensene, de nærmeste relevante
+originalsakene og faktisk lest omfang. Skriv hva andre allerede har dokumentert,
+hvilket konkret eget bidrag som gjenstår og hva som kan avkrefte nyhetsverdien.
+Antall leste artikler er ikke kvalitetsmålet; en tittelgjennomgang eller to
+generelle bakgrunnsartikler erstatter ikke kontroll av den tiltenkte vinkelen.
+Er nærmeste original utilgjengelig, før tilgangsgapet og begrens nyhetsløftet.
+En mer detaljert dokumentinnhenting er ikke alene en begrunnelse. Etterprøving,
+oppdatering eller forklaring må ha en uttrykkelig egen leserverdi. Hastende
+kildebevaring eller tidlig innsyn med lang behandlingstid kan gå først når
+behovet og den uavklarte nyhetsverdien begrunnes i saken.
 
 Etter første kildekontroll velger redaksjonen: **undersøk nå**, **følg med** på
 en konkret hendelse/dato, eller **parker** med grunn og hva som kan åpne sporet

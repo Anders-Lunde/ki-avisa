@@ -22,6 +22,17 @@ ventes; skriv da bare det dokumentene bærer.
 
 ## Slik skrives artikkelen
 
+- **Skriv for en vanlig leser, ikke for kontrolløren** (eierens presisering 6.11.2026).
+  Still spørsmålet: hvorfor skulle noen som ikke følger saken, lese dette og fortelle
+  det videre? Begynn med en konkret scene, person eller handling fra kildene der det
+  finnes. Mennesker, steder og øyeblikk går foran tall og arkivreferanser.
+- **Lengde:** forklaringer og dokumentsaker sikter mot 500–900 ord i brødteksten,
+  undersøkelser mot 900–1 500. Lengre tekst må begrunnes i handoffen. Kalendere,
+  tidsforløp, pengestrømmer og steder vises som grafikk (`figure`, se under) med kort
+  tekst rundt. Ikke skriv lange lister.
+- **Forbehold der de betyr noe.** Ett tydelig forbehold ved påstanden det gjelder er
+  bedre enn gjentatte reservasjoner i hver setning. Detaljert lesescope, filer og
+  arbeidsprosess hører hjemme i saksmappen, ikke i artikkelen.
 - **Led med svaret** og det sterkeste dokumenterte poenget leseren ikke kjenner.
   Tittelen sier hva som er nytt. Den gjentar ikke den offisielle linjen, med mindre
   det å bekrefte eller avkrefte den er nyheten. Tittel og ingress skal kunne leses
@@ -37,8 +48,9 @@ ventes; skriv da bare det dokumentene bærer.
 - Kildehenvisning [1], [2] osv. ved sentrale faktapåstander; tallene viser til
   rekkefølgen i `sources`. Kildetittelen navngir dokument, dato og side, avsnitt eller
   tabell. Skill egen kontroll fra andre mediers funn og krediter dem.
-- Kort metodedel: faktakutt, sentrale beregninger, definisjoner, vesentlige mangler
-  og hva materialet ikke kan vise.
+- Kort metodedel som siste seksjon, høyst 150 ord: faktakutt, sentrale beregninger,
+  definisjoner, vesentlige mangler og hva materialet ikke kan vise. Ikke fortell om
+  verktøy, søkeprosesser, mislykkede nettkall eller interne kontroller.
 - Lengden følger materialet. Ikke fyll, og ikke legg til sidespor for å virke grundig.
 - Skriv om henvendelser bare det handoffen dokumenterer. Stillhet er ikke et svar.
 
@@ -46,11 +58,19 @@ Skriv <<CASE>>/article.json som ett JSON-objekt, ren tekst uten HTML:
 
 ```json
 {"slug":"kort-ascii-slug","title":"Norsk tittel","deck":"Ingress",
+"summary":["Punkt 1","Punkt 2","Punkt 3"],
 "kind":"Undersøkelse / Forklart / Dokumentar","date":"YYYY-MM-DD",
-"status":"draft","sections":[{"heading":"Mellomtittel","paragraphs":["Tekst"]}],
+"status":"draft","sections":[{"heading":"Mellomtittel","paragraphs":["Tekst"],
+  "figure":{"file":"slug-kart.svg","alt":"Beskrivelse for skjermleser","caption":"Bildetekst med kilde"}}],
 "sources":[{"title":"Originalkildens navn, dato og relevant side","url":"https://..."}],
 "updates":[]}
 ```
+
+`figure` er valgfritt per seksjon og vises under seksjonens avsnitt. Filen er en SVG du
+lager i `v5/sites/innsyn/graphics/`. Den skal være uten skript og uten eksterne ressurser,
+og alle tall og datoer i den må stå i brødteksten eller i kildene.
+
+`summary` er et kort sammendrag øverst i artikkelen (eierkrav 6.11.2026). Det skal ha 3–4 punkter på én–to setninger hver, høyst 260 tegn per punkt, uten kildehenvisninger. Ta med de viktigste svarene, og ett punkt om den viktigste usikkerheten eller grensen når den betyr noe for leseren. Hvert punkt må være dekket av brødteksten; sammendraget kan ikke inneholde nye påstander, tall eller sterkere formuleringer. Kontrollen sjekker sammendraget mot teksten.
 
 Finnes `article.json` fra før, er dette en ny versjon av saken etter ny research:
 bevar slug og før en datert opplysning i `updates` dersom versjonen har vært vist
