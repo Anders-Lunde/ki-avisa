@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 830" width="480" height="830" font-family="Arial, Helvetica, sans-serif">
+<title>Registrert svartid for skriftlige spørsmål til statsrådene</title>
+<rect width="480" height="830" fill="#fffdf7"/>
+<text x="16" y="28" font-size="17" font-weight="700" fill="#23312f">Når er svaret registrert?</text>
+<text x="16" y="48" font-size="13" fill="#58645e">Hverdager fra Stortinget sendte spørsmålet til registrert svardato.</text>
+<text x="16" y="64" font-size="13" fill="#58645e">Andel av 10 190 besvarte spørsmål  2023–2026.</text>
+<line x1="44" y1="244.0" x2="464" y2="244.0" stroke="#d9d6cc" stroke-width="1"/>
+<text x="38" y="248.0" font-size="11" text-anchor="end" fill="#58645e">0 %</text>
+<line x1="44" y1="177.3" x2="464" y2="177.3" stroke="#d9d6cc" stroke-width="1"/>
+<text x="38" y="181.3" font-size="11" text-anchor="end" fill="#58645e">20 %</text>
+<line x1="44" y1="110.7" x2="464" y2="110.7" stroke="#d9d6cc" stroke-width="1"/>
+<text x="38" y="114.7" font-size="11" text-anchor="end" fill="#58645e">40 %</text>
+<rect x="45.0" y="243.7" width="30.3" height="0.5" rx="2" fill="#8c968f"/>
+<text x="60.2" y="259" font-size="11" text-anchor="middle" fill="#58645e">0</text>
+<rect x="77.3" y="242.1" width="30.3" height="1.9" rx="2" fill="#8c968f"/>
+<text x="92.5" y="259" font-size="11" text-anchor="middle" fill="#58645e">1</text>
+<rect x="109.6" y="236.3" width="30.3" height="7.7" rx="2" fill="#8c968f"/>
+<text x="124.8" y="259" font-size="11" text-anchor="middle" fill="#58645e">2</text>
+<rect x="141.9" y="223.5" width="30.3" height="20.5" rx="2" fill="#8c968f"/>
+<text x="157.1" y="259" font-size="11" text-anchor="middle" fill="#58645e">3</text>
+<rect x="174.2" y="206.4" width="30.3" height="37.6" rx="2" fill="#8c968f"/>
+<text x="189.4" y="259" font-size="11" text-anchor="middle" fill="#58645e">4</text>
+<rect x="206.5" y="194.2" width="30.3" height="49.8" rx="2" fill="#8c968f"/>
+<text x="221.7" y="259" font-size="11" text-anchor="middle" fill="#58645e">5</text>
+<rect x="238.8" y="110.7" width="30.3" height="133.3" rx="2" fill="#8c968f"/>
+<text x="254.0" y="259" font-size="11" text-anchor="middle" fill="#58645e">6</text>
+<rect x="271.2" y="201.6" width="30.3" height="42.4" rx="2" fill="#a93828"/>
+<text x="286.3" y="259" font-size="11" text-anchor="middle" fill="#58645e">7</text>
+<rect x="303.5" y="223.5" width="30.3" height="20.5" rx="2" fill="#a93828"/>
+<text x="318.6" y="259" font-size="11" text-anchor="middle" fill="#58645e">8</text>
+<rect x="335.8" y="235.4" width="30.3" height="8.6" rx="2" fill="#a93828"/>
+<text x="350.9" y="259" font-size="11" text-anchor="middle" fill="#58645e">9</text>
+<rect x="368.1" y="239.8" width="30.3" height="4.2" rx="2" fill="#a93828"/>
+<text x="383.2" y="259" font-size="11" text-anchor="middle" fill="#58645e">10</text>
+<rect x="400.4" y="242.2" width="30.3" height="1.8" rx="2" fill="#a93828"/>
+<text x="415.5" y="259" font-size="11" text-anchor="middle" fill="#58645e">11</text>
+<rect x="432.7" y="239.2" width="30.3" height="4.8" rx="2" fill="#a93828"/>
+<text x="447.8" y="259" font-size="11" text-anchor="middle" fill="#58645e">12+</text>
+<line x1="270.2" y1="80" x2="270.2" y2="244" stroke="#23312f" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="276.2" y="92" font-size="12" font-weight="700" fill="#23312f">Fristen: 6 hverdager</text>
+<text x="233.8" y="104.7" font-size="12" text-anchor="end" fill="#23312f">40 % på fristdagen</text>
+<text x="290.3" y="195.6" font-size="12" fill="#a93828">13 % én hverdag etter</text>
+<text x="44" y="276" font-size="11" fill="#58645e">Lørdag teller. Søndag, helligdager og antatte påske- og juledager teller ikke.</text>
+<text x="16" y="316" font-size="17" font-weight="700" fill="#23312f">Andel svar registrert etter fristen</text>
+<text x="16" y="336" font-size="13" fill="#58645e">Etter statsrådsposten spørsmålet gikk til, 2023–2026.</text>
+<text x="16" y="352" font-size="13" fill="#58645e">Poster med minst 100 svar. To poster kan høre til samme departement.</text>
+<line x1="182.0" y1="382" x2="182.0" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="182.0" y="763" font-size="11" text-anchor="middle" fill="#58645e">0 %</text>
+<line x1="230.8" y1="382" x2="230.8" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="230.8" y="763" font-size="11" text-anchor="middle" fill="#58645e">10 %</text>
+<line x1="279.6" y1="382" x2="279.6" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="279.6" y="763" font-size="11" text-anchor="middle" fill="#58645e">20 %</text>
+<line x1="328.4" y1="382" x2="328.4" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="328.4" y="763" font-size="11" text-anchor="middle" fill="#58645e">30 %</text>
+<line x1="377.2" y1="382" x2="377.2" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="377.2" y="763" font-size="11" text-anchor="middle" fill="#58645e">40 %</text>
+<line x1="426.0" y1="382" x2="426.0" y2="749" stroke="#d9d6cc" stroke-width="1"/>
+<text x="426.0" y="763" font-size="11" text-anchor="middle" fill="#58645e">50 %</text>
+<text x="16" y="398" font-size="12" fill="#23312f">Digitalisering og forv.</text>
+<rect x="182" y="387" width="207.8" height="12" rx="2" fill="#58645e"/>
+<text x="394.8" y="398" font-size="12" font-weight="700" fill="#23312f">43 %</text>
+<text x="16" y="417" font-size="12" fill="#23312f">Helse og omsorg</text>
+<rect x="182" y="406" width="185.6" height="12" rx="2" fill="#58645e"/>
+<text x="372.6" y="417" font-size="12" font-weight="700" fill="#23312f">38 %</text>
+<text x="16" y="436" font-size="12" fill="#23312f">Forskning og høyere utd.</text>
+<rect x="182" y="425" width="166.0" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="455" font-size="12" fill="#23312f">Finans</text>
+<rect x="182" y="444" width="138.7" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="474" font-size="12" fill="#23312f">Statsministeren</text>
+<rect x="182" y="463" width="138.1" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="493" font-size="12" fill="#23312f">Næring</text>
+<rect x="182" y="482" width="138.0" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="512" font-size="12" fill="#23312f">Landbruk og mat</text>
+<rect x="182" y="501" width="135.2" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="531" font-size="12" fill="#23312f">Kunnskap (skole)</text>
+<rect x="182" y="520" width="129.3" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="550" font-size="12" fill="#23312f">Arbeid og inkludering</text>
+<rect x="182" y="539" width="127.3" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="569" font-size="12" fill="#23312f">Utenriks</text>
+<rect x="182" y="558" width="122.4" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="588" font-size="12" fill="#23312f">Justis og beredskap</text>
+<rect x="182" y="577" width="121.4" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="607" font-size="12" fill="#23312f">Fiskeri og hav</text>
+<rect x="182" y="596" width="114.1" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="626" font-size="12" fill="#23312f">Forsvar</text>
+<rect x="182" y="615" width="113.8" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="645" font-size="12" fill="#23312f">Energi</text>
+<rect x="182" y="634" width="113.7" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="664" font-size="12" fill="#23312f">Barn og familie</text>
+<rect x="182" y="653" width="102.7" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="683" font-size="12" fill="#23312f">Kommunal og distrikt</text>
+<rect x="182" y="672" width="93.9" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="702" font-size="12" fill="#23312f">Samferdsel</text>
+<rect x="182" y="691" width="72.0" height="12" rx="2" fill="#58645e"/>
+<text x="259.0" y="702" font-size="12" font-weight="700" fill="#23312f">15 %</text>
+<text x="16" y="721" font-size="12" fill="#23312f">Klima og miljø</text>
+<rect x="182" y="710" width="70.0" height="12" rx="2" fill="#58645e"/>
+<text x="16" y="740" font-size="12" fill="#23312f">Kultur og likestilling</text>
+<rect x="182" y="729" width="59.2" height="12" rx="2" fill="#58645e"/>
+<line x1="302.5" y1="376" x2="302.5" y2="749" stroke="#a93828" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="306.5" y="374" font-size="12" fill="#a93828">Alle: 25 %</text>
+<text x="16" y="787" font-size="11" fill="#58645e">Kilde: Stortingets åpne data, uttrekk 6.11.2026. KI-avisas beregning.</text>
+<text x="16" y="802" font-size="11" fill="#58645e">Registrert svardato er ikke alltid datoen på svarbrevet.</text>
+<text x="16" y="817" font-size="11" fill="#58645e">«Etter fristen» betyr ikke regelbrudd: statsråden kan varsle om senere svar.</text>
+</svg>

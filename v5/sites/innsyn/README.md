@@ -21,8 +21,51 @@ are generated; private previews retain noindex.
 Buildless static article site. `content/*.json` contains only text deliberately
 prepared for readers. Never point it at a case directory or raw correspondence.
 `build.py` validates source URLs and escapes text; `dist/` is generated output.
-No external scripts, tracking, tip form or invented contact. The hosted preview
+No external scripts, visitor identifiers, tip form or invented contact. The hosted preview
 uses the existing owner-only Sites access gate; the static app adds no account UI.
+
+## Private visitor statistics
+
+The public Cloudflare Pages site serves a server-rendered owner dashboard at
+`https://ki-avisa.pages.dev/stats`, protected by HTTP Basic authentication.
+The owner credential is local and ignored: `v5/workspace/hosting/stats-access.txt`.
+Only its SHA-256 credential hash is stored as the production Pages secret
+`STATS_AUTH_SHA256`. Never put a password in the builder, client assets or Git.
+Missing secrets/database fail closed; dashboard responses are no-store/noindex.
+There is no static stats HTML, public data API, menu link or sitemap entry.
+
+`worker.mjs` counts successful public HTML page loads on the production hostname.
+It stores only totals by Oslo calendar date, allowlisted public path and fixed
+referral category in D1 (`stats.sql`, `STATS_DB` in `wrangler.toml`). No cookies,
+IP addresses, visitor IDs, user agents or arbitrary referral addresses are stored.
+These are page views, not unique people. Known bots, prefetches, HEAD, errors,
+private/unknown routes, preview hosts and requests carrying Authorization are
+excluded; bot filtering is necessarily incomplete. Counts begin at activation.
+The dashboard offers 7/30/90 days, popular pages, sources and daily totals.
+
+`build.py` emits the combined stats/video Worker, exact public HTML allowlist,
+route configuration and `stats.css` only for public builds. Existing video byte
+ranges remain supported. A stats write failure leaves public pages available.
+`publish.py` reviews/hashes `wrangler.toml` along with the export and copies it
+outside the isolated upload directory so subsequent monitored deployments keep
+the D1 binding. The runtime secret remains in Cloudflare.
+
+Validate with Node 22.13+ (SQLite) and the existing AgentHouse Python:
+
+```powershell
+node v5/sites/innsyn/check_stats.mjs
+& ..\AgentHouse\.venv\Scripts\python.exe v5/sites/innsyn/build.py --output public
+& ..\AgentHouse\.venv\Scripts\python.exe v5/sites/innsyn/check_public.py
+```
+
+Schema initialization is an explicit, idempotent infrastructure step from this
+site directory: `npx --yes wrangler@4.157.0 d1 execute ki-avisa-stats --remote --file stats.sql`.
+Never run synthetic traffic fixtures against production. Password changes need
+a new secret hash and a new deployment; updating the secret alone does not
+change existing deployments. Keep any rotation credential private and record the
+actual deployment receipt. Config-only changes invalidate release readiness;
+secret-only changes need an explicit redeployment because public hashes do not
+contain secrets.
 
 From the repository root, using the project's Python environment:
 

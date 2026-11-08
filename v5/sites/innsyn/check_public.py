@@ -17,6 +17,8 @@ def main():
         root = Path(folder)
         (root / 'content').mkdir()
         shutil.copytree(HERE / 'assets', root / 'assets')
+        shutil.copyfile(HERE / 'worker.mjs', root / 'worker.mjs')
+        shutil.copyfile(HERE / 'stats.css', root / 'stats.css')
         (root / 'style.css').write_text('body{}', encoding='utf-8')
         article = dict(slug='public-fixture', title='Public fixture', deck='Public fixture',
                        kind='Forklart', date='2026-11-04', status='published',
@@ -36,7 +38,8 @@ def main():
         site.HERE = root
         site.build(False, None, 'public')
         names = {p.name for p in (root / 'public').iterdir()}
-        assert names == {'index.html', 'om.html', 'public-fixture.html', '404.html', 'style.css', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'}, names
+        assert names == {'index.html', 'om.html', 'tips.html', 'public-fixture.html', '404.html', 'style.css', 'stats.css', '_worker.js', '_routes.json', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'}, names
+        assert '__PUBLIC_PATHS__' not in (root / 'public/_worker.js').read_text(encoding='utf-8')
         content = '\n'.join(p.read_text(encoding='utf-8') for p in (root / 'public').iterdir() if p.suffix in {'.html', '.xml', '.css', '.txt'})
         assert all(marker not in content for marker in ('PRIVATE_DRAFT_SENTINEL', 'PRIVATE_ACTIVITY_SENTINEL', 'STALE_PRIVATE_SENTINEL'))
         assert (root / 'dist' / 'preview-sentinel').read_text(encoding='utf-8') == 'Keep original preview'
@@ -66,11 +69,15 @@ def main():
     site.HERE = HERE
     published = [json.loads(p.read_text(encoding='utf-8')) for p in (HERE / 'content').glob('*.json')]
     published = [a for a in published if a['status'] == 'published']
-    allowed = {'index.html', 'om.html', '404.html', 'style.css', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'} | {a['slug'] + '.html' for a in published}
+    allowed = {'index.html', 'om.html', 'tips.html', '404.html', 'style.css', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'} | {a['slug'] + '.html' for a in published}
+    allowed |= {name for a in published for name in site.transcripts(a)}
     media = {f"media/{a['slug']}/{item['file']}" for a in published for item in a.get('gallery') or []}
     media |= {f"media/{a['slug']}/{name}" for a in published for name in site.film_files(a)}
+    media |= {f"media/{a['slug']}/{name}" for a in published for name in site.document_files(a)}
     if media:
         allowed |= {'media'}
+    allowed |= {'_worker.js', '_routes.json', 'stats.css'}
+    assert 'stats' not in (HERE / 'public/sitemap.xml').read_text(encoding='utf-8')
     actual = {p.name for p in (HERE / 'public').iterdir()}
     assert actual == allowed, {'unexpected': sorted(actual - allowed), 'missing': sorted(allowed - actual)}
     assert all(p.is_file() and not p.is_symlink() for p in (HERE / 'public').iterdir() if p.name != 'media')
