@@ -80,11 +80,15 @@ def main():
             result = subprocess.run([sys.executable, *script], cwd=PROJECT, capture_output=True, text=True, encoding='utf-8')
             if result.returncode:
                 raise RuntimeError(result.stderr or result.stdout or 'Build or public export check failed')
-        digest, files = fingerprint(OUTPUT)
+        export_digest, files = fingerprint(OUTPUT)
+        config = HERE / 'wrangler.toml'
+        config_bytes = config.read_bytes()
+        config_digest = hashlib.sha256(config_bytes).hexdigest()
+        digest = hashlib.sha256((export_digest + config_digest).encode()).hexdigest()
         ready_path = STATE / 'publication-ready.json'
         deployed_path = STATE / 'publication-deployed.json'
         if args.command == 'prepare':
-            save(ready_path, dict(site=SITE, sha256=digest, files=files, reviewed_by=args.reviewed_by.strip(), reviewed_at=datetime.now(timezone.utc).isoformat()))
+            save(ready_path, dict(site=SITE, sha256=digest, config_sha256=config_digest, files=files, reviewed_by=args.reviewed_by.strip(), reviewed_at=datetime.now(timezone.utc).isoformat()))
             print(json.dumps(dict(status='ready', site=SITE, sha256=digest, files=len(files))))
             return
         ready = json.loads(ready_path.read_text(encoding='utf-8')) if ready_path.exists() else {}
@@ -101,14 +105,15 @@ def main():
         with tempfile.TemporaryDirectory(prefix='public-release-', dir=STATE) as temporary:
             stage = Path(temporary) / 'site'
             shutil.copytree(OUTPUT, stage)
-            if fingerprint(stage)[0] != digest:
+            (Path(temporary) / 'wrangler.toml').write_bytes(config_bytes)
+            if fingerprint(stage)[0] != export_digest:
                 raise RuntimeError('Export changed during packaging; publication review must be repeated')
-            result = subprocess.run([npx, '--yes', 'wrangler@4.157.0', 'pages', 'deploy', str(stage), '--project-name', SITE, '--branch', 'main', '--commit-dirty=true'], cwd=stage, capture_output=True, text=True, encoding='utf-8', errors='replace')
+            result = subprocess.run([npx, '--yes', 'wrangler@4.157.0', 'pages', 'deploy', str(stage), '--project-name', SITE, '--branch', 'main', '--commit-dirty=true'], cwd=temporary, capture_output=True, text=True, encoding='utf-8', errors='replace')
         stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
         (STATE / f'publication-{stamp}.log').write_text(result.stdout + result.stderr, encoding='utf-8')
         if result.returncode:
             raise RuntimeError('Cloudflare deployment failed; previous success state is unchanged. See the private publication log.')
-        save(deployed_path, dict(site=SITE, sha256=digest, files=files, reviewed_by=ready['reviewed_by'], reviewed_at=ready['reviewed_at'], deployed_at=datetime.now(timezone.utc).isoformat()))
+        save(deployed_path, dict(site=SITE, sha256=digest, config_sha256=config_digest, files=files, reviewed_by=ready['reviewed_by'], reviewed_at=ready['reviewed_at'], deployed_at=datetime.now(timezone.utc).isoformat()))
         print(json.dumps(dict(status='deployed', site=SITE, url=f'https://{SITE}.pages.dev/', sha256=digest)))
 
 

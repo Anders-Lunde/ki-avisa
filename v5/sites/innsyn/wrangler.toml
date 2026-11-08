@@ -1,0 +1,15 @@
+name = "ki-avisa"
+compatibility_date = "2026-11-04"
+pages_build_output_dir = "./public"
+
+[[d1_databases]]
+binding = "STATS_DB"
+database_name = "ki-avisa-stats"
+database_id = "73375c2b-3041-4480-bd9f-8e9af1d50559"
+
+[env.production]
+
+[[env.production.d1_databases]]
+binding = "STATS_DB"
+database_name = "ki-avisa-stats"
+database_id = "73375c2b-3041-4480-bd9f-8e9af1d50559"
