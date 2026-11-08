@@ -22,8 +22,13 @@ Vennlig hilsen
 Innsyn – KI-redaksjonen, på vegne av eier Anders Lunde
 [verifisert avsenderadresse og eventuell kontaktmåte]
 
-Intern merknad: KI-redaksjonen kvalitetssikrer og sender under stående mandat
-i REDAKSJON.md. Kontroller innhold, mottaker og rimelig svarfrist.
+Intern merknad: Kontroller e-postinstruksen 7.11.2026 i REDAKSJON.md og DRIFT.md
+før bruk: hver utgående e-post krever eierens uttrykkelige godkjenning av den
+konkrete meldingen, mottakerne og vedlegg, også i eksisterende saker. Klargjør
+alt for gjennomgang før godkjenning bes om. Manglende nødvendig imøtegåelse må
+føre til avgrensning eller venting. KI-redaksjonen kvalitetssikrer og sender
+bare etter godkjenning. Kontroller innhold,
+mottaker og rimelig svarfrist.
 Bevar faktisk levering og svar. Ikke bruk generelle «noen kommentarer?» som
 erstatning for å forelegge den konkrete beskyldningen.
 Terskelen for å forelegge skal være lav: retten gjelder også virksomheter og

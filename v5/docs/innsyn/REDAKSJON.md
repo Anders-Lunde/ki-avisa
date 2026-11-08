@@ -21,13 +21,48 @@ berørte, følge opp svar og avslag, skrive artikler og produsere filmene.
 Arbeidet skal ikke skyves over på leserne eller gjøres til en arbeidsliste
 for eieren. Leseren får journalistikken og dokumentasjonen av hvordan den ble til.
 
-Eieren har gitt stående fullmakt til nødvendig journalistisk korrespondanse:
+Eieren ga 31.10.2026 stående fullmakt til nødvendig journalistisk korrespondanse:
 innsynskrav, oppklarende spørsmål, purringer, begrunnede klager og samtidig
-imøtegåelse innenfor en konkret sak. Det kreves ikke ny eiergodkjenning for
-hver ordinære henvendelse. Bruk den verifiserte tilkoblede Gmail-kontoen i
+imøtegåelse innenfor en konkret sak. **Eierinstruksen 7.11.2026 nedenfor opphever
+fullmakten til selvstendig e-postsending: hver utgående e-post krever konkret,
+uttrykkelig eiergodkjenning.** Bruk den verifiserte tilkoblede Gmail-kontoen i
 kanalens `correspondence`-oppsett. Fullmakten gir ikke rett til å kjøpe
 abonnementer, påta eieren økonomiske eller rettslige forpliktelser eller
 utgi KI-agenter for å være navngitte mennesker.
+
+### Eierinstruks 7. november 2026: uttrykkelig godkjenning før hver e-post
+
+- All selvstendig e-postsending stanser umiddelbart. **Hver utgående e-post
+  krever eierens uttrykkelige godkjenning før sending.** Dette gjelder alle
+  eksisterende og nye saker, også planlagt eller nødvendig kontakt, svar,
+  videresendinger, innsynskrav, spørsmål, purringer, klager, imøtegåelse og rettelser.
+  Instruksen erstatter tidligere stående sendefullmakt. Ingen eksisterende sak
+  eller tråd er unntatt.
+- Klargjør den konkrete meldingen med alle mottakere (også kopi/blindkopi), emne,
+  nøyaktig tekst, vedlegg og formål før godkjenning bes om. Eieren godkjenner
+  denne utsendingen; research og utforming er fortsatt redaksjonens arbeid.
+  Før datert godkjenning og hvilken melding/mottakerliste den gjelder i sakens
+  private `reporting.md`. Manglende svar er ikke godkjenning. Endres innhold,
+  vedlegg eller mottakere, innhent ny godkjenning.
+- Instruksen gjelder også eldre oppgaver, usendte utkast, kølagte meldinger,
+  tekniske retry-planer og generelle instrukser om tidlig kontakt. En frist,
+  bestilling, klargjort payload eller `autonomous_reporting_authorized` fra en
+  eldre kvittering gir ingen sendefullmakt. Ikke omgå godkjenningen med en annen
+  avsender eller tjeneste, eller ved å be eieren utføre rapporteringen.
+  Før «ikke sendt – venter på eierens uttrykkelige godkjenning» i kontaktloggen
+  ved et konkret sendebehov. Overlever bare som utkast som venter på godkjenning.
+  Kontroller Sendt/tråden ved usikker levering før enhver retry; en bekreftet
+  sending skal ikke gjentas, og en ny utsending krever egen godkjenning.
+- Research, skriving og lesing av relevante innkomne svar og vedlegg kan
+  fortsette. Forbudet senker ikke kildekravene eller kravet om reell imøtegåelse.
+  Krever en påstand kontakt som ennå ikke er godkjent, avgrens eller vent/parker
+  med begrunnelse i `editorial_review.md`. Stillhet og manglende godkjenning er
+  ikke klarering.
+- UiO-/bibliotekunntaket i AGENTS.md gjelder fortsatt: kontakt om eierens tilgang,
+  konto, lisens, automatisering eller redaksjonell bruk krever uttrykkelig
+  godkjenning av den konkrete mottakeren og meldingen, også i en pågående sak.
+
+### Gjennomføring innenfor mandatet
 
 Kontrollen 31.10.2026 bekreftet kontoen `[privat avsender i lokal kanalfil]` gjennom
 Gmail-tilkoblingen. Dette er privat driftsinformasjon, ikke en automatisk
@@ -183,8 +218,11 @@ kan være sterke saker.
    tilgangsstatus. Bruk prosjektets nedlastings-, PDF-, medie- og ID-ferdigheter.
 3. Saksmappen (linjen `Case:` i briefen) er det varige arkivet. Før kilder,
    påstander, kronologi og kontakt der, ikke i parallelle logger i episoden.
-4. Skriv og send nødvendige innsynskrav og spørsmål **tidlig**, mens researchen
-   pågår. KI-redaksjonen følger selv opp svar, vedlegg, purringer og avslag.
+4. Klargjør nødvendige innsynskrav og spørsmål **tidlig**, mens researchen pågår.
+   Be om eierens uttrykkelige godkjenning av hver konkret e-post etter instruksen
+   7.11.2026; send først når den foreligger. Fortsett uavhengig research mens
+   godkjenning eller svar ventes. KI-redaksjonen vurderer selv svar, vedlegg og
+   behovet for oppfølging; også hver oppfølgingsmelding krever godkjenning.
    Bevar faktisk leveringskvittering; en usendt tekst er ikke gjennomført kontakt.
 5. Kjør sakens faser med `journalism_desk task` og `run-task`: `research`,
    `article`, `review`, `revision` og `verify` (se DRIFT.md). Rollene løses fra
@@ -325,6 +363,10 @@ send en tipsers identitet til modelltjenester. Et uoppfordret tips er en
 hypotese som kontrolleres mot dokumenter.
 
 ## Innsyn og kontakt
+
+All utsending og oppfølging nedenfor er underlagt e-postinstruksen 7.11.2026:
+hver utgående e-post krever eierens uttrykkelige godkjenning av den konkrete
+meldingen og mottakerne. Innsyns- og svarfrister gir ikke unntak.
 
 Sivilombudets [Innsynsguide](https://www.sivilombudet.no/veiledere/innsynsguiden/)
 (oppdatert 5. mai 2026, kontrollert 31. oktober) beskriver at alle kan be om

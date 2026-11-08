@@ -18,7 +18,10 @@ Vennlig hilsen
 Innsyn – KI-redaksjonen, på vegne av eier Anders Lunde
 [verifisert avsenderadresse]
 
-Intern merknad: Kontroller hvilket regelverk som gjelder før utsending.
+Intern merknad: Kontroller først e-postinstruksen 7.11.2026 i REDAKSJON.md og
+DRIFT.md: hver e-post krever eierens uttrykkelige godkjenning av den konkrete
+meldingen, mottakerne og vedlegg, også i eksisterende saker. Klargjør alt for
+gjennomgang før godkjenning bes om. Kontroller hvilket regelverk som gjelder.
 Denne malen skal ikke brukes som en påstand om tilgang til straffesaksmapper.
 Hold kravet kort og presist; det trenger ingen begrunnelse om saken du
 arbeider med, og skal ikke røpe hypotesen eller kilder.

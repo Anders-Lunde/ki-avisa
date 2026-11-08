@@ -8,6 +8,16 @@ presseetikk, imøtegåelse, innsyn og juridiske begreper, [KILDER.md](KILDER.md)
 kilder og data, og [DRIFT.md](DRIFT.md) for faste kjøringer og korrespondanse.
 Åpne dem når oppgaven krever det.
 
+**Eierinstruks 7. november 2026 – e-post:** All selvstendig utsending stanser
+umiddelbart. Hver utgående e-post krever eierens uttrykkelige godkjenning av
+den konkrete meldingen og alle mottakere før sending, både i eksisterende og
+nye saker. Dette gjelder også svar, purringer, videresendinger og kølagte
+meldinger, og går foran stående mandat og eldre oppgaver. Klargjør nøyaktig
+tekst, mottakere og vedlegg for gjennomgang før godkjenning bes om; før
+godkjenningen privat. Les REDAKSJON.md og DRIFT.md. Fortsett research og lesing
+av relevante svar. Manglende nødvendig imøtegåelse krever avgrensning eller
+venting, ikke utsending uten godkjenning.
+
 Planlagte kjøringer starter i en ny chat i den lokale prosjektmappen. Varig
 kontekst ligger i filene: siste relevante dag-/ukebrief, sakens siste beslutning,
 bestilling, kontaktlogg, handoff og kildekvitteringer. Les det oppgaven trenger,

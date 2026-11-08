@@ -22,7 +22,11 @@ fra dokumenter, derfor sveipet over kontrollorganene i ukeoversikten.
 ## Daglig inntak
 
 0. Se først etter forfalte oppfølginger i `reporting.md` i saksmappene og ta dem etter
-   DRIFT.md før noe nytt. Finnes ingen sendte henvendelser, er det intet å gjøre.
+   DRIFT.md før noe nytt. Kontroller e-postinstruksen 7.11.2026 før utsending:
+   hver utgående e-post krever eierens uttrykkelige godkjenning av den konkrete
+   meldingen og mottakerne, også i eksisterende saker og ved purringer.
+   Les relevante innkomne svar uansett. Finnes ingen sendte henvendelser, er det
+   ingen slik oppfølging å gjøre.
 1. Les siste dagbrief, `latest_run.json` og åpne feil fra tidligere run. Kontroller
    at et inntak ikke allerede kjører; ikke start et parallelt duplikat. Ta med
    tidligere prioriterte tekster som ennå ikke er lest. Vurder dem før nye
@@ -131,8 +135,11 @@ fullstendig rangering av all norsk politisk journalistikk.
 
 Avslutt med **redaksjonsmøtet** i DRIFT.md: en datert beslutning for hver sak, nye
 saker bare når et spor består bestillingstesten i ARBEIDSKORT.md, og én sak pekt ut
-til tirsdagens saksarbeid. KI-redaksjonen kan selv opprette og undersøke en sak og
-sende nødvendige henvendelser under stående mandat. Ikke gi eieren eller leserne
+til tirsdagens saksarbeid. KI-redaksjonen kan selv opprette og undersøke en sak.
+Fra 7.11.2026 krever hver utgående e-post eierens uttrykkelige godkjenning,
+både i eksisterende og nye saker. Klargjør konkrete meldinger for gjennomgang
+før godkjenning bes om. Se DRIFT.md og REDAKSJON.md om godkjenning, avgrensning
+og manglende nødvendig imøtegåelse. Ikke gi eieren eller leserne
 oppgavene med å be om innsyn.
 
 Denne gjenbruken gjelder rutinemessig kildeinntak. Den uavhengige kontrollen av
@@ -159,5 +166,6 @@ prompten krever bytte til KI-avisa før fil-/CLI-arbeid. Det er ikke en annen
 aktiv arkivkopi. Ingen ny jobb eller offentlig deploy er laget.
 
 Ta også forfalte, allerede mandaterte utsendinger med leveringsfeil i
-reporting.md før nytt inntak. Kontroller Sendt/tråden før eventuell retry og
+reporting.md før nytt inntak, men ikke send på nytt uten egen uttrykkelig
+eiergodkjenning etter instruksen 7.11.2026. Kontroller Sendt/tråden før eventuell retry og
 bruk den eksisterende forberedte meldingen. Kvotefeil er ikke bekreftet sending.

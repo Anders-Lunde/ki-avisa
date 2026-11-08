@@ -4,7 +4,7 @@ Oppgave <<TASK_ID>>, laget <<CREATED_AT>>. Rollen løses fra kanalfilen; ikke ve
 eller endre modell. Dette er saksarbeid under KI-redaksjonens stående mandat, ikke
 en ny oppsettgjennomgang.
 
-Les AGENTS.md, `v5/docs/innsyn/ARBEIDSKORT.md`, `REDAKSJON.md` og `KILDER.md`. Les
+Les AGENTS.md, `v5/docs/innsyn/ARBEIDSKORT.md`, `REDAKSJON.md`, `DRIFT.md` og `KILDER.md`. Les
 saksmappen <<CASE>>: `brief.md`, `editorial_review.md` (særlig «Bestilling» og siste
 daterte beslutning), `sources.md`, `claims.md`, `chronology.md`, `reporting.md` og
 eventuell tidligere `writer_handoff.md`. Viser briefen til en topic pick, les den som
@@ -33,12 +33,18 @@ planleggingsgrunnlag, ikke som bevis. <<EPISODE_CONTEXT>>
    hentetid, lokal fil og tilgangsstatus i `sources.md` etter KILDER.md. Bruk
    eksisterende v5-ferdigheter for nedlasting, PDF og data. Skill metadata fra lest
    innhold.
-4. **Send nødvendige henvendelser tidlig,** etter DRIFT.md og malene i
-   `v5/docs/innsyn/templates/`, når saken trenger dokumenter eller forklaring. Er
-   Gmail-verktøyene ikke tilgjengelige i denne økten, klargjør henvendelsen med
-   `journalism_desk request-prepare`, før mangelen i `reporting.md` og overlever
-   den eksakte utsendingen til økten som startet oppgaven. Ikke send på nytt det som
-   allerede er sendt; les tråden først.
+4. **Klargjør kontakt, men vent på godkjenning før sending.** Eierinstruksen
+   7.11.2026 krever eierens uttrykkelige godkjenning av hver konkret e-post,
+   alle mottakere og vedlegg, i både eksisterende og nye saker. Dette gjelder
+   også svar, purringer, innsyn og imøtegåelse. Klargjør nødvendig kontakt tidlig
+   etter DRIFT.md og malene i `v5/docs/innsyn/templates/`, eventuelt med
+   `journalism_desk request-prepare`, og overlever den eksakte meldingen som
+   **utkast som venter på eiergodkjenning**, ikke som en sendebestilling.
+   Før kontaktgapet og eventuell faktisk godkjenning i `reporting.md`. Send bare
+   etter dokumentert godkjenning av akkurat denne utsendingen. Manglende
+   Gmail-verktøy føres separat. Fortsett uavhengig research og avgrens eller
+   vent/parker når manglende dokumentasjon eller imøtegåelse er avgjørende.
+   Les tråden før eventuell retry; en ny utsending krever egen godkjenning.
 5. **Regn reproduserbart.** Legg inndata, et lite kjørbart skript og resultatet i
    `calculations/`. Sammenlikn bare samme enhet, prisnivå, mva.-grunnlag og omfang.
 6. **Oppdater saken.** `claims.md` skal også inneholde tolkninger, merket som
@@ -61,7 +67,8 @@ planleggingsgrunnlag, ikke som bevis. <<EPISODE_CONTEXT>>
      enn den offisielle opplysningen med forbehold?
    - **Første produkt** og en kort filmvurdering etter STRATEGI.md.
 
-Avslutt med faktiske funn, endringer i saken, anbefalingen og eventuell utsending
-som økten som startet oppgaven må utføre. Ikke påstå kontakt, kontroll, beslutning
+Avslutt med faktiske funn, endringer i saken, anbefalingen og eventuelt konkret
+e-postutkast med tydelig godkjenningsstatus til økten som startet oppgaven.
+Ikke påstå kontakt, kontroll, beslutning
 eller publisering uten kvittering. Ikke endre nettsted, modelloppsett eller andre
 kanaler.

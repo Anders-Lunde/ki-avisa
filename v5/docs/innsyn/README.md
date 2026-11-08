@@ -19,7 +19,10 @@ direkte med `..\AgentHouse\.venv\Scripts\python.exe v5/sites/innsyn/build.py`.
 Se [nettstedets README](../../sites/innsyn/README.md). Den eksisterende private
 Sites-identiteten er bevart bare her; ingen deploy er utført ved migreringen.
 
-Korrespondansemandatet og plikten til faktiske Gmail-kvitteringer står fast.
+Fra eierinstruksen 7.11.2026 krever hver utgående e-post eierens uttrykkelige
+godkjenning av den konkrete meldingen og mottakerne, i både eksisterende og nye
+saker. Ingen selvstendig sending. Se REDAKSJON.md og DRIFT.md. Plikten til faktiske
+Gmail-kvitteringer står fast for godkjente utsendinger.
 Private arkiver og lokale avsenderinnstillinger følger ikke GitHub. Navnet
 KI-avisa er valgt av eieren, men offentlig kanalidentitet, redaktør og
 kontaktadresse må fortsatt etableres før offentlig lansering.

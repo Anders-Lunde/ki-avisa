@@ -4,6 +4,12 @@ Kontrollert 31. oktober 2026. Dette er redaksjonell veiledning for Innsyn, ikke
 en påstand om at alle kilder er åpne, fullstendige eller undersøkt i hver sak.
 Velg ruter ut fra sakens spørsmål; ingen sak trenger hele katalogen.
 
+Kontaktforslag og tilgangsruter nedenfor gir ikke sendefullmakt. Etter
+eierinstruksen 7.11.2026 krever hver utgående e-post eierens uttrykkelige
+godkjenning av den konkrete meldingen og mottakerne, i alle saker; se REDAKSJON.md
+og DRIFT.md. Fortsett tilgjengelig research mens godkjenning ventes.
+UiO-/bibliotekkontakt om eierens tilgang er også underlagt AGENTS.md.
+
 ## Daglig dekning fra YouTube
 
 Et datert, verifisert kanalutvalg ligger i

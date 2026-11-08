@@ -67,10 +67,21 @@ basis and significance, strongest contrary evidence and its effect, and a
 proportionate next step or decision to park. New reporting cases mark
 `Nyhetsvurdering` unfinished. Renew the assessment before the next inquiry when
 new evidence weakens the premise; adding caveats alone does not justify
-continuing. This is the newsroom agent's judgment under the mandate, without
-per-message owner approval or an automated keyword score.
+continuing. This editorial assessment remains the newsroom agent's judgment,
+not an automated keyword score. Sending any email separately requires the owner's
+explicit approval under the 7 November 2026 instruction below.
 
 Private archives, mail originals, licensed papers, credentials, audition audio,
 run logs and generated site previews remain local and ignored. GitHub is a
 source repository, not a backup of private reporting. Preserve the local archive
 and checked migration backup with the project's normal private backup process.
+
+The owner's 7 November 2026 email instruction in this project's AGENTS.md,
+REDAKSJON.md and DRIFT.md limits the shared skill's general correspondence
+guidance: autonomous email sending is stopped immediately. Every outgoing email
+requires explicit owner approval of that exact message, all recipients and
+attachments before sending, in existing and new cases alike. Check the current
+rule even for older prepared tasks, queued messages and retries; a prepared
+payload or an older authorization receipt is not permission. The local and example
+channel configurations now set `autonomous_reporting_authorized: false`.
+Keep shared AgentHouse tooling and other channels unchanged.

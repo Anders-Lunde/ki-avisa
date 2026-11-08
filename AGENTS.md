@@ -16,9 +16,18 @@ the same method. Disclose the relationship where relevant. Newsroom contact
 authority covers ordinary reporting, not political lobbying or submissions.
 Do not transfer private correspondence or source identities to KI-partiet.
 
-Check run/status receipts and existing sends before action. Use the standing
-journalistic mandate and connected Gmail tools for necessary correspondence;
-do not assign reporting to the owner. Preserve exact sent content/provider IDs.
+Check run/status receipts and existing sends before action. Owner instruction
+7 November 2026 revokes autonomous email sending immediately. Every outgoing
+email requires the owner's explicit approval of that specific message and all
+recipients before sending, in existing and new cases alike. This includes replies,
+follow-ups, forwards, complaints, opportunities to reply and queued messages.
+Neither standing reporting authority, a deadline, a prepared draft nor an earlier
+case instruction is approval. Prepare the exact message, recipients and attachments
+for review before asking; record the approval in the private contact log. Changed
+content or recipients requires fresh approval. Read REDAKSJON.md and DRIFT.md even
+for older tasks and retries. Continue research and reading relevant incoming mail.
+Do not assign reporting to the owner or bypass approval through another sender
+or service. Preserve exact sent content/provider IDs for approved sends.
 
 Exception: permission to use the owner's existing UiO/library access is not
 permission to contact UiO, its library/e-resource staff, publishers or access

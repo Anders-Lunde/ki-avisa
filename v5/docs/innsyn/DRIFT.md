@@ -2,8 +2,9 @@
 
 Eierens presisering 31.10.2026: KI-journalistene utfører arbeidet, Anders Lunde
 er eier. Les [ARBEIDSKORT.md](ARBEIDSKORT.md) først, og REDAKSJON.md og KILDER.md
-når oppgaven krever det. Eieren har gitt stående mandat til normal journalistisk
-korrespondanse i konkrete saker fra konfigurert avsender. Oppgaven er å
+når oppgaven krever det. Fra eierinstruksen 7.11.2026 er selvstendig e-postsending
+stanset: hver utgående e-post krever eierens uttrykkelige godkjenning, i alle saker.
+Se REDAKSJON.md og kontrollen under «Saksarbeid og korrespondanse». Oppgaven er å
 gjennomføre researchen, ikke gi eieren eller leserne en oppskrift.
 
 ## Faste kjøringer
@@ -78,9 +79,12 @@ utfører dem.
    retting. Nye svar eller dokumenter i en sak med artikkel starter med `research`.
 4. Stopp ved første reelle venting: svarfrist, manglende dokument, eller anbefaling om
    å vente eller parkere. Før datert neste handling i sakens `editorial_review.md`.
-5. Overleverer en fase en utsending, gjennomfør den med Gmail-verktøyene i denne
-   økten etter «Saksarbeid og korrespondanse» under. Mangler verktøyene, før det som
-   en mangel; ikke be eieren sende.
+5. Overleverer en fase en utsending, kontroller først e-postinstruksen 7.11.2026
+   etter «Saksarbeid og korrespondanse» under, også når oppgaven ble laget før
+   instruksen. Klargjør meldingen for eierens uttrykkelige godkjenning; send bare
+   etter godkjenning av den konkrete meldingen og mottakerne. Hold resten tilbake
+   som utkast og før kontaktgapet; ikke be eieren sende. Mangler verktøyene for en
+   godkjent utsending, før det som en mangel.
 6. Etter `verify` eller en kontroll som sier klar: før **KI-redaktørens beslutning**
    kort i `editorial_review.md`: privat kontrollert utkast, venter på navngitt svar,
    eller parkert. Offentlig utgivelse krever etablert lansering (REDAKSJON.md).
@@ -95,6 +99,23 @@ start den på nytt uten å ha lest kvitteringen.
 
 ## Saksarbeid og korrespondanse
 
+**Før enhver utsending, også klargjorte meldinger og retry:** Les eierinstruksen
+7.11.2026 i REDAKSJON.md. Hver e-post krever eierens uttrykkelige godkjenning av
+den konkrete meldingen, alle mottakere og vedlegg. Dette gjelder også eksisterende
+saker, svar, purringer, klager og imøtegåelse. Klargjør alt for gjennomgang før
+godkjenning bes om, og før godkjenningen privat i `reporting.md`. Endret innhold,
+vedlegg eller mottakere krever ny godkjenning. Stående mandat, eldre oppgaver og
+frister gir ingen sendefullmakt. Ikke omgå kravet med annen avsender eller tjeneste.
+Uten godkjenning: før «ikke sendt – venter på eierens uttrykkelige godkjenning»
+og hva kontaktgapet betyr, fortsett uavhengig research og avgrens eller vent/parker
+dersom nødvendig dokumentasjon eller imøtegåelse mangler. Overlever bare som
+utkast som venter på godkjenning. Lesing av relevante innkomne svar fortsetter.
+En ny utsending ved retry krever egen godkjenning; kontroller først faktisk levering.
+
+De tre eksisterende planlagte redaksjonskjøringene fikk samme godkjenningskrav
+uttrykkelig inn i promptene 7.11.2026. Tidspunkter, modeller, prosjekt og aktive
+statuser ble beholdt. Dette er ingen sendekvittering.
+
 1. Les aktive saksmapper i `v5/workspace/journalism/innsyn/`. Velg konkret neste
    handling ut fra dokumentmangler, innkomne svar og frister. Les forrige
    beslutning før nye spor prioriteres; en mappe alene er ikke en aktiv sak.
@@ -105,15 +126,17 @@ start den på nytt uten å ha lest kvitteringen.
 3. Finn mottakerens offisielle adresse og før adressekilden i `reporting.md`.
    Skriv presist innsynskrav eller spørsmål med korrekt sak, formål og frist.
    Oppgi KI-redaksjonen og eieren sannferdig. Bruk journalism_desk `request-prepare`
-   med kanalfil, deretter `mail-payload`.
-4. Send med den tilkoblede Gmail-tjenesten under fullmakten. Dette trinnet skal
-   gjennomføres når saken trenger det, uten ny godkjenning av hvert krav. Lagre
-   den faktiske leverandørresponsen og kall `record-sent` med neste oppfølgingsdato
+   med kanalfil. Legg frem nøyaktig melding, mottakere og vedlegg for eierens
+   uttrykkelige godkjenning; kall `mail-payload` først når godkjenningen foreligger.
+4. Send med den tilkoblede Gmail-tjenesten bare etter godkjenning av den konkrete
+   utsendingen etter kontrollen over. Lagre den faktiske leverandørresponsen og
+   kall `record-sent` med neste oppfølgingsdato
    etter tidsreglene i REDAKSJON.md (fem arbeidsdager for et innsynskrav).
    Ved usikker levering: kontroller Sendt/tråden før ny utsending.
 5. Les relevante svar og vedlegg i riktig tråd. Bevar originalen privat, før
    kildehenvisning, vurder hva svaret faktisk dokumenterer og oppdater påstander
-   og tidslinje. Purr, presiser eller vurder begrunnet klage ved behov. Ikke
+   og tidslinje. Klargjør purring, presisering eller begrunnet klage ved behov;
+   hver utgående melding krever egen uttrykkelig godkjenning. Ikke
    røp fortrolige kilder eller send uvedkommende personopplysninger. Er svaret
    vesentlig for et utkast, før det som neste handling for saksarbeidet.
 6. Utarbeid journalistikken når dokumentasjonen bærer den, gjennom fasene i
@@ -166,5 +189,6 @@ prompten krever bytte til KI-avisa før fil-/CLI-arbeid. Det er ikke en annen
 aktiv arkivkopi. Ingen ny jobb eller offentlig deploy er laget.
 
 Ta også forfalte, allerede mandaterte utsendinger med leveringsfeil i
-reporting.md før nytt inntak. Kontroller Sendt/tråden før eventuell retry og
+reporting.md før nytt inntak, men ikke send på nytt uten egen uttrykkelig
+eiergodkjenning etter instruksen 7.11.2026. Kontroller Sendt/tråden før eventuell retry og
 bruk den eksisterende forberedte meldingen. Kvotefeil er ikke bekreftet sending.

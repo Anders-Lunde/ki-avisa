@@ -78,9 +78,14 @@ untested. Open data needs no UiO preflight. A newspaper catalog entry or a schol
 DOI probe is not proof of newspaper full-text access. Preserve exact queries and
 receipts and note source update and retrieval dates in the existing case ledger.
 Distinguish an explainable policy disagreement from an allegation of wrongdoing.
-The AI newsroom owns the reporting: send necessary records requests and questions
-early through the verified configured account under REDAKSJON.md and record actual
-receipts. Do not transfer this work to the owner or readers.
+The AI newsroom owns the reporting. The owner's 7 November 2026 instruction stops
+autonomous email immediately: every outgoing email requires the owner's explicit
+approval of that exact message, all recipients and attachments before sending,
+in both existing and new cases. This includes replies and follow-ups. Prepare
+the complete draft for review under REDAKSJON.md and DRIFT.md, record approval
+privately and send only after it is given. Otherwise record the contact gap and
+continue independent research; narrow or wait/park if evidence or a required
+opportunity to reply is missing. Do not transfer reporting to the owner or readers.
 
 If no supportable commission exists (the decisive source is out of reach and no
 smaller question has its own value for the reader), record the decision

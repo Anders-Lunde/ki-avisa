@@ -219,7 +219,9 @@ eller redaksjonens egen leting. Det blir en sak gjennom fem trinn:
    kilden med tilgangsvei og tid, hva som avkrefter, og første produkt. Bestillingen
    står øverst i sakens `editorial_review.md`.
 2. **Første kildekontroll.** Les den avgjørende kilden eller et lite datauttrekk.
-   Send nødvendige innsynskrav og spørsmål med en gang. Beslutt **undersøk nå**,
+   Klargjør nødvendige innsynskrav og spørsmål tidlig, men send hver e-post først
+   etter eierens uttrykkelige godkjenning av meldingen og mottakerne etter
+   instruksen 7.11.2026 (REDAKSJON.md og DRIFT.md). Beslutt **undersøk nå**,
    **følg med** til en dato eller hendelse, eller **parker** med grunn og hva som kan
    åpne saken igjen.
 3. **Research** til et svar. Handoffen sier hva svaret er, hva som er nytt, hvilke
