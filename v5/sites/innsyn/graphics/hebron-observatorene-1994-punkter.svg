@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 572" width="480" height="572" role="img" aria-labelledby="hebron-punkter-t hebron-punkter-d">
+<title id="hebron-punkter-t">Fire punkter fra utkast til signert avtale om observatørene i Hebron, april–mai 1994</title>
+<desc id="hebron-punkter-d">Religiøse steder: med i utkastet 14.4, UD ber om stryking 15.4, ute av utkastet til Israel 18.4, ikke nevnt i avtalen 2.5. Rapportere brudd på menneskerettighetene: med 14.4 og 18.4, Israel ber om stryking 20.4, avtalen har daglige rapporter basert på menneskerettighetsstandarder. Full adgang til fengsler og arrestregistre: med 14.4 og 18.4, UD ber om stryking 15.4 og Israel 20.4, avtalen har samarbeid med Røde Kors om fanger. Foto og video: ikke med 14.4, med 18.4, Israel ber om stryking 20.4, avtalen tillater det som grunnlag for rapporter, ikke for offentlig bruk.</desc>
+<rect width="480" height="572" fill="#fffdf7"/>
+<text x="12" y="26" font-size="17" fill="#23312f" font-family="Georgia, Times New Roman, serif" font-weight="700">Fire punkter fra utkast til avtale</text>
+<text x="12" y="44" font-size="13" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Sto punktet i teksten, og hvem ba om å stryke det?</text>
+<rect x="8" y="56" width="464" height="58" fill="#f6f3eb" stroke="#cbd0c5"/>
+<circle cx="24" cy="78" r="7" fill="#23312f"/>
+<text x="40" y="82.5" font-size="13" fill="#23312f" font-family="Arial, Helvetica, sans-serif">Står i teksten</text>
+<circle cx="250" cy="78" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/>
+<text x="266" y="82.5" font-size="13" fill="#23312f" font-family="Arial, Helvetica, sans-serif">Står ikke i teksten</text>
+<circle cx="24" cy="100" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/><path d="M24 93.5 A6.5 6.5 0 0 0 24 106.5 Z" fill="#23312f"/>
+<text x="40" y="104.5" font-size="13" fill="#23312f" font-family="Arial, Helvetica, sans-serif">Står med endret ordlyd</text>
+<path d="M244 94 L256 106 M256 94 L244 106" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<text x="266" y="104.5" font-size="13" fill="#23312f" font-family="Arial, Helvetica, sans-serif">Ber om å stryke punktet</text>
+<text x="64" y="140" font-size="12.5" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">Utkast</text>
+<text x="64" y="156" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">14.4</text>
+<text x="152" y="140" font-size="12.5" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">UD ber</text>
+<text x="152" y="156" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">15.4</text>
+<text x="240" y="140" font-size="12.5" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">Til Israel</text>
+<text x="240" y="156" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">18.4</text>
+<text x="328" y="140" font-size="12.5" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">Israel ber</text>
+<text x="328" y="156" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">20.4</text>
+<text x="416" y="140" font-size="12.5" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">Signert</text>
+<text x="416" y="156" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">2.5</text>
+<line x1="12" y1="166" x2="468" y2="166" stroke="#23312f" stroke-width="1"/>
+<text x="12" y="192" font-size="14" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700">Religiøse steder nevnt i patruljepunktet</text>
+<line x1="64" y1="216" x2="416" y2="216" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="64" cy="216" r="7" fill="#23312f"/>
+<path d="M146 210 L158 222 M158 210 L146 222" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="240" cy="216" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/>
+<path d="M323 216 H333" stroke="#8c968f" stroke-width="1.6"/>
+<circle cx="416" cy="216" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/>
+<text x="12" y="243" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Avtalen: religiøse steder nevnes ikke</text>
+<line x1="12" y1="252" x2="468" y2="252" stroke="#cbd0c5" stroke-width="1"/>
+<text x="12" y="276" font-size="14" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700">Rapportere brudd på menneskerettighetene</text>
+<line x1="64" y1="300" x2="416" y2="300" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="64" cy="300" r="7" fill="#23312f"/>
+<path d="M147 300 H157" stroke="#8c968f" stroke-width="1.6"/>
+<circle cx="240" cy="300" r="7" fill="#23312f"/>
+<path d="M322 294 L334 306 M334 294 L322 306" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="416" cy="300" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/><path d="M416 293.5 A6.5 6.5 0 0 0 416 306.5 Z" fill="#23312f"/>
+<text x="12" y="327" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Avtalen: daglige rapporter basert på menneskerettighetsstandarder</text>
+<line x1="12" y1="336" x2="468" y2="336" stroke="#cbd0c5" stroke-width="1"/>
+<text x="12" y="360" font-size="14" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700">Full adgang til fengsler og arrestregistre</text>
+<line x1="64" y1="384" x2="416" y2="384" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="64" cy="384" r="7" fill="#23312f"/>
+<path d="M146 378 L158 390 M158 378 L146 390" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="240" cy="384" r="7" fill="#23312f"/>
+<path d="M322 378 L334 390 M334 378 L322 390" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="416" cy="384" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/>
+<text x="12" y="411" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Avtalen: samarbeid med Røde Kors (ICRC) om fanger og opptegnelser</text>
+<line x1="12" y1="420" x2="468" y2="420" stroke="#cbd0c5" stroke-width="1"/>
+<text x="12" y="444" font-size="14" fill="#23312f" font-family="Arial, Helvetica, sans-serif" font-weight="700">Foto og video i rapporteringen</text>
+<line x1="64" y1="468" x2="416" y2="468" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="64" cy="468" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/>
+<path d="M147 468 H157" stroke="#8c968f" stroke-width="1.6"/>
+<circle cx="240" cy="468" r="7" fill="#23312f"/>
+<path d="M322 462 L334 474 M334 462 L322 474" stroke="#a93828" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="416" cy="468" r="6.5" fill="#fffdf7" stroke="#23312f" stroke-width="1.8"/><path d="M416 461.5 A6.5 6.5 0 0 0 416 474.5 Z" fill="#23312f"/>
+<text x="12" y="495" font-size="12.5" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Avtalen: tillatt som grunnlag for rapporter, ikke for offentlig bruk</text>
+<line x1="12" y1="504" x2="468" y2="504" stroke="#cbd0c5" stroke-width="1"/>
+<text x="12" y="522" font-size="12" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Strek: ingen merknad. Israels ønsker er foreløpige, slik UD gjenga dem.</text>
+<text x="12" y="540" font-size="12" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Israel mente oppdraget allerede fulgte av avtalen 31.3.</text>
+<text x="12" y="558" font-size="12" fill="#58645e" font-family="Arial, Helvetica, sans-serif">Kilder: UDs arkiv i Nasjonalarkivet og FNs traktatsamling.</text>
+</svg>

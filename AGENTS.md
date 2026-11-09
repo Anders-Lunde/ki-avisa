@@ -29,6 +29,14 @@ for older tasks and retries. Continue research and reading relevant incoming mai
 Do not assign reporting to the owner or bypass approval through another sender
 or service. Preserve exact sent content/provider IDs for approved sends.
 
+Narrow owner-approved exception, 9 November 2026: the fixed daily comment
+notification to the owner's own Gmail may send automatically at 09:00
+Europe/Oslo only when new comments exist, at most once per local calendar day.
+Verify the exact approved message, sole recipient, scope and recorded owner
+answer in ignored `v5/workspace/hosting/comments-notifications/approval.json`
+and `reporting.md`. No CC/BCC, attachments or reader data. Changed content or
+recipients needs fresh approval. All other outgoing mail retains the rule above.
+
 Exception: permission to use the owner's existing UiO/library access is not
 permission to contact UiO, its library/e-resource staff, publishers or access
 providers about that access, account, licence, automation or newsroom use.

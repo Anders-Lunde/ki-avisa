@@ -18,6 +18,14 @@ godkjenningen privat. Les REDAKSJON.md og DRIFT.md. Fortsett research og lesing
 av relevante svar. Manglende nødvendig imøtegåelse krever avgrensning eller
 venting, ikke utsending uten godkjenning.
 
+**Avgrenset eiergodkjent unntak 9. november 2026:** Den faste kommentarmeldingen
+til eierens egen Gmail er godkjent for automatisk varsling kl. 09.00 norsk tid,
+bare ved nye kommentarer og maksimalt én gang per norsk kalenderdag. Kontroller
+eksakt melding, eneste mottaker, godkjenning og omfang i den private
+`v5/workspace/hosting/comments-notifications/approval.json` og kontaktloggen der.
+Ingen kopi, vedlegg eller leseropplysninger. Endringer krever ny godkjenning;
+all annen e-post følger regelen over. Se DRIFT.md.
+
 Planlagte kjøringer starter i en ny chat i den lokale prosjektmappen. Varig
 kontekst ligger i filene: siste relevante dag-/ukebrief, sakens siste beslutning,
 bestilling, kontaktlogg, handoff og kildekvitteringer. Les det oppgaven trenger,

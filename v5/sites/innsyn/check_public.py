@@ -17,8 +17,10 @@ def main():
         root = Path(folder)
         (root / 'content').mkdir()
         shutil.copytree(HERE / 'assets', root / 'assets')
-        shutil.copyfile(HERE / 'worker.mjs', root / 'worker.mjs')
+        for name in ('worker.mjs','comments.mjs','comments.js','comments-copy.json','moderation.js'):
+            shutil.copyfile(HERE / name, root / name)
         shutil.copyfile(HERE / 'stats.css', root / 'stats.css')
+        shutil.copyfile(HERE / 'contents.js', root / 'contents.js')
         (root / 'style.css').write_text('body{}', encoding='utf-8')
         article = dict(slug='public-fixture', title='Public fixture', deck='Public fixture',
                        kind='Forklart', date='2026-11-04', status='published',
@@ -38,9 +40,13 @@ def main():
         site.HERE = root
         site.build(False, None, 'public')
         names = {p.name for p in (root / 'public').iterdir()}
-        assert names == {'index.html', 'om.html', 'tips.html', 'public-fixture.html', '404.html', 'style.css', 'stats.css', '_worker.js', '_routes.json', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'}, names
+        assert names == {'index.html', 'om.html', 'tips.html', 'public-fixture.html', '404.html', 'style.css', 'contents.js', 'comments.js', 'moderation.js', 'stats.css', '_worker.js', '_routes.json', 'robots.txt', 'sitemap.xml', '_headers', 'icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png'}, names
+        worker_text = (root / 'public/_worker.js').read_text(encoding='utf-8')
+        assert '__COMMENT_ARTICLES__' not in worker_text and '__COMMENTS_COPY__' not in worker_text
+        assert 'private-fixture' not in worker_text
+        assert 'data-comments="public-fixture"' in (root / 'public/public-fixture.html').read_text(encoding='utf-8')
         assert '__PUBLIC_PATHS__' not in (root / 'public/_worker.js').read_text(encoding='utf-8')
-        content = '\n'.join(p.read_text(encoding='utf-8') for p in (root / 'public').iterdir() if p.suffix in {'.html', '.xml', '.css', '.txt'})
+        content = '\n'.join(p.read_text(encoding='utf-8') for p in (root / 'public').iterdir() if p.suffix in {'.html', '.xml', '.css', '.js', '.txt'})
         assert all(marker not in content for marker in ('PRIVATE_DRAFT_SENTINEL', 'PRIVATE_ACTIVITY_SENTINEL', 'STALE_PRIVATE_SENTINEL'))
         assert (root / 'dist' / 'preview-sentinel').read_text(encoding='utf-8') == 'Keep original preview'
         try:
@@ -76,7 +82,10 @@ def main():
     media |= {f"media/{a['slug']}/{name}" for a in published for name in site.document_files(a)}
     if media:
         allowed |= {'media'}
-    allowed |= {'_worker.js', '_routes.json', 'stats.css'}
+    allowed |= {'_worker.js', '_routes.json', 'stats.css', 'contents.js', 'comments.js', 'moderation.js'}
+    assert (HERE / 'public/contents.js').read_bytes() == (HERE / 'contents.js').read_bytes()
+    assert '/contents.js' in json.loads((HERE / 'public/_routes.json').read_text(encoding='utf-8'))['exclude']
+    assert "script-src 'self';" in (HERE / 'public/_headers').read_text(encoding='utf-8')
     assert 'stats' not in (HERE / 'public/sitemap.xml').read_text(encoding='utf-8')
     actual = {p.name for p in (HERE / 'public').iterdir()}
     assert actual == allowed, {'unexpected': sorted(actual - allowed), 'missing': sorted(allowed - actual)}
@@ -86,6 +95,12 @@ def main():
     descriptions = set()
     for path in (HERE / 'public').glob('*.html'):
         text = path.read_text(encoding='utf-8')
+        scripts = re.findall(r'<script\b[^>]*\bsrc="([^"]+)"', text)
+        expected_scripts = (['contents.js'] if 'class="contents"' in text else []) + (['comments.js'] if 'data-comments=' in text else [])
+        assert scripts == expected_scripts, (path.name, scripts)
+        if path.stem in {a['slug'] for a in published}:
+            assert 'id="kommentarer"' in text, path.name
+            assert text.index('id="kommentarer"') < text.index('id="kilder"') < text.index('id="endringer"'), path.name
         assert 'href="/favicon.png"' in text and 'href="/apple-touch-icon.png"' in text
         if path.name == '404.html':
             assert '<meta name="robots" content="noindex,follow">' in text

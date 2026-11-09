@@ -1,6 +1,7 @@
 // The builder replaces this array with the exact public HTML route allowlist.
 const PUBLIC_PATHS = __PUBLIC_PATHS__;
 const HOST = 'ki-avisa.pages.dev';
+// __COMMENTS_MODULE__
 const BOT = /bot|crawler|spider|slurp|headless|lighthouse|preview|facebookexternalhit|curl|wget|python|httpx|uptime|monitor/i;
 const SOURCES = {
   'google.com': 'Google', 'google.no': 'Google', 'bing.com': 'Bing',
@@ -144,6 +145,8 @@ export default {
     let path;
     try { path = decodeURIComponent(url.pathname).toLowerCase(); }
     catch { return new Response('Ugyldig adresse.', {status:400}); }
+    const comments = await handleComments(request, env, context, url, path);
+    if (comments) return comments;
     if (path === '/stats' || path.startsWith('/stats/') || path === '/stats.html') {
       return dashboard(request, env);
     }

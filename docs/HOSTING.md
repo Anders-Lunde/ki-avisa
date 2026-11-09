@@ -1,5 +1,31 @@
 # Cloudflare Pages for KI-avisa
 
+## Kommentarfelt, 9. november 2026
+
+Kommentarfeltet er publisert på alle ti publiserte artikler og er standard for
+nye artikler. Det står rett etter artikkelinnholdet, før kilder/fotnoter og
+rettelser. Visningsnavn krever ingen konto; innlegg og svar forhåndsmodereres.
+Den private køen er `https://ki-avisa.pages.dev/moderering`, med eksisterende
+statistikkinnlogging. Rapportering fra lesere flagger bare for redaksjonell
+vurdering. Ingen testkommentarer er lagt i produksjon.
+
+Dette bruker eksisterende EU D1-binding og en additiv `comments.sql`-migrering.
+Den tilfeldige HMAC-nøkkelen finnes bare som Pages-hemmeligheten
+`COMMENTS_SECRET`; verdien er ikke lagret i kildekode eller lokale kvitteringer.
+Serveren håndhever grenser, origin-kontroll, signerte skjematokens og privat
+moderering. Se nettstedets README for konkrete grenser og oppbevaring.
+Kommentarer, IP-pseudonymer og korrespondanse følger ikke Git eller offentlig
+artikkel-JSON. Ingen ny ekstern kommentartjeneste er opprettet.
+
+Bygg-/eksportkontroll, sikkerhetstester med ekte lokal SQLite, eksisterende
+statistikk-/videotester, lokal nettleserinnsending og godkjenning, mobilvisning
+og levende HTTPS-kontroll bestod. Alle ti artikkeltekster er sammenliknet med
+forrige produksjonsversjon og bevart. Eksporthasher, privat innlogging,
+API-konfigurasjon og plassering før kilder er kontrollert i produksjon.
+Privat kvittering: `v5/workspace/hosting/comments-20261109/verification.json`.
+Utrulling: `publication-20261109T211106Z.log` med eksporthash
+`e236e960ddbb4b597eef8be9deec8c7c2a0ff83163a6b7438d1054fa9f80f6ba`.
+
 ## Passordbeskyttet besøksstatistikk, 7. november 2026
 
 Eieren bestilte en privat statistikkside. Den er publisert på

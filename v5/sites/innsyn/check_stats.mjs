@@ -5,7 +5,8 @@ import {DatabaseSync} from 'node:sqlite';
 import {createHash} from 'node:crypto';
 
 const code = readFileSync(new URL('./worker.mjs', import.meta.url), 'utf8')
-  .replace('__PUBLIC_PATHS__', JSON.stringify(['/', '/om', '/example']));
+  .replace('__PUBLIC_PATHS__', JSON.stringify(['/', '/om', '/example']))
+  .replace('// __COMMENTS_MODULE__', readFileSync(new URL('./comments.mjs', import.meta.url),'utf8').replace('__COMMENT_ARTICLES__', '{}').replace('__COMMENTS_COPY__', readFileSync(new URL('./comments-copy.json', import.meta.url),'utf8')));
 const {default:worker} = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 const db = new DatabaseSync(':memory:');
 db.exec(readFileSync(new URL('./stats.sql', import.meta.url), 'utf8'));

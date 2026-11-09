@@ -43,6 +43,10 @@ def page(title: str, body: str, preview: bool, voices: bool, current: str = '', 
             owner += nav_link('stemmer.html', 'Stemmeprøver')
         owner += '</div>'
     script = '<script src="voices.js" defer></script>' if current == 'stemmer.html' else ''
+    if 'class="contents"' in body:
+        script += '<script src="contents.js" defer></script>'
+    if 'data-comments=' in body:
+        script += '<script src="comments.js" defer></script>'
     description = article['deck'] if article else ('Slik arbeider KI-avisa med kilder, faktakontroll, KI og rettelser. Ansvarlig redaktør: Anders Lunde.' if current == 'om.html' else 'Tips KI-avisa om maktmisbruk, lovbrudd, habilitet eller bruk av offentlige penger. Les hva du bør sende, og hva vi ikke kan love.' if current == 'tips.html' else 'KI-avisa undersøker makt, følger offentlige penger og forklarer samfunnsdebatten, med synlige kilder og rettelser.')
     description = ' '.join(description.split())[:160]
     canonical = BASE + ('' if current in {'', 'index.html'} else current.removesuffix('.html'))
@@ -272,7 +276,28 @@ def section_html(article: dict, section: dict, index: int, references: dict[int,
     return f'<section id="avsnitt-{index}"><h2>{esc(section["heading"])}</h2>{body}</section>'
 
 
-def article_html(article: dict, transcript_pages: dict[str, dict] | None = None) -> str:
+def comments_copy() -> dict:
+    return json.loads((HERE / 'comments-copy.json').read_text(encoding='utf-8'))
+
+
+def comments_html(article: dict, preview: bool) -> str:
+    c = comments_copy()
+    if article['status'] != 'published' or article.get('comments') is False:
+        return f'<section id="kommentarer" class="comments"><h2>{esc(c["heading"])}</h2><p>{esc(c["preview"] if article["status"] != "published" else c["closed"])}</p></section>'
+    return (f'<section id="kommentarer" class="comments" data-comments="{esc(article["slug"])}" data-preview="{str(preview).lower()}" aria-labelledby="comments-heading">'
+            f'<h2 id="comments-heading">{esc(c["heading"])}</h2><p>{esc(c["intro"])}</p>'
+            f'<details class="comment-rules"><summary>{esc(c["rules_title"])}</summary><p>{esc(c["rules"])}</p><p>{esc(c["limits"])}</p><p>{esc(c["rules_privacy"])}</p><a href="tips.html">Tips oss</a> · <a href="om.html#personvern-kommentarer">{esc(c["privacy_link"])}</a></details>'
+            f'<p class="comment-status" role="status" aria-live="polite"></p><noscript><p>{esc(c["no_js"])}</p></noscript>'
+            f'<form class="comment-form" hidden><p data-reply-status></p><button type="button" data-cancel-reply hidden>{esc(c["cancel_reply"])}</button>'
+            f'<label for="comment-name">{esc(c["name_label"])}</label><input id="comment-name" name="name" required maxlength="80" autocomplete="nickname" aria-describedby="comment-pseudonym"><p id="comment-pseudonym" class="comment-help">{esc(c["pseudonym"])}</p>'
+            f'<label for="comment-body">{esc(c["body_label"])}</label><textarea id="comment-body" name="body" required maxlength="6000" rows="6" aria-describedby="comment-limits"></textarea><p id="comment-limits" class="comment-help">{esc(c["limits"])}</p>'
+            f'<div class="comment-honey" aria-hidden="true"><label for="comment-website">Website</label><input id="comment-website" name="website" tabindex="-1" autocomplete="off"></div>'
+            f'<button type="submit" disabled>{esc(c["submit"])}</button></form><div data-comment-list></div>'
+            f'<button type="button" data-comment-more hidden>{esc(c["more"])}</button><button type="button" data-comment-retry hidden>{esc(c["retry"])}</button></section>')
+
+
+def article_html(article: dict, transcript_pages: dict[str, dict] | None = None, preview: bool = False) -> str:
+    comments_label = esc(comments_copy()['heading'])
     references: dict[int, int] = {}
     content = ''.join(section_html(article, s, i, references) for i, s in enumerate(article['sections'], 1))
     sources = ''
@@ -291,7 +316,14 @@ def article_html(article: dict, transcript_pages: dict[str, dict] | None = None)
         if not re.fullmatch(r'[A-Za-z0-9_-]{11}', article['youtube_id']):
             raise ValueError('Invalid verified YouTube video ID')
         video = f'<iframe src="https://www.youtube-nocookie.com/embed/{article["youtube_id"]}" title="Se filmen" loading="lazy" allowfullscreen></iframe>'
-    return f'<article class="reading"><header class="article-head"><a class="back" href="index.html">← Forsiden</a><p class="eyebrow">{esc(article["kind"])}</p><h1>{esc(article["title"])}</h1><p class="deck">{esc(article["deck"])}</p><div class="byline"><span>Av KI-avisas KI-redaksjon</span><time datetime="{esc(article["date"])}">{esc(article["date"])}</time>{draft_badge(article)}</div>{notice}{summary_html(article)}<nav class="evidence-nav" aria-label="Dokumentasjon"><a href="#kilder">{len(article["sources"])} {"kilde" if len(article["sources"]) == 1 else "kilder"} ↓</a><a href="#endringer">Endringer og rettelser ↓</a><a href="om.html#ki">Om KI-redaksjonen ↗</a></nav></header><div class="reading-layout"><nav class="contents" aria-label="I denne teksten"><p>I denne teksten</p><ol>{contents}</ol><a href="#kilder">Kilder</a><a href="#endringer">Endringer og rettelser</a></nav><div class="article-body">{video}{film_html(article)}{content}{register_html(article, transcript_pages or {})}{gallery_html(article)}<section id="kilder" class="sources"><p class="eyebrow">Dokumentasjon</p><h2>Kilder til teksten</h2><ol>{sources}</ol></section><section id="endringer" class="changes"><h2>Endringer og rettelser</h2>{updates}<a href="om.html#rettelser">Slik håndterer vi rettelser →</a></section><a class="back-to-top" href="#main">Til toppen ↑</a></div></div></article>'
+    return f'<article class="reading"><header class="article-head"><a class="back" href="index.html">← Forsiden</a><p class="eyebrow">{esc(article["kind"])}</p><h1>{esc(article["title"])}</h1><p class="deck">{esc(article["deck"])}</p><div class="byline"><span>Av KI-avisas KI-redaksjon</span><time datetime="{esc(article["date"])}">{esc(article["date"])}</time>{draft_badge(article)}</div>{notice}{summary_html(article)}<nav class="evidence-nav" aria-label="Dokumentasjon"><a href="#kilder">{len(article["sources"])} {"kilde" if len(article["sources"]) == 1 else "kilder"} ↓</a><a href="#endringer">Endringer og rettelser ↓</a><a href="#kommentarer">{comments_label} ↓</a><a href="om.html#ki">Om KI-redaksjonen ↗</a></nav></header><div class="reading-layout"><nav class="contents" aria-label="I denne teksten"><p>I denne teksten</p><ol>{contents}</ol><a href="#kommentarer">{comments_label}</a><a href="#kilder">Kilder</a><a href="#endringer">Endringer og rettelser</a></nav><div class="article-body">{video}{film_html(article)}{content}{register_html(article, transcript_pages or {})}{gallery_html(article)}{comments_html(article, preview)}<section id="kilder" class="sources"><p class="eyebrow">Dokumentasjon</p><h2>Kilder til teksten</h2><ol>{sources}</ol></section><section id="endringer" class="changes"><h2>Endringer og rettelser</h2>{updates}<a href="om.html#rettelser">Slik håndterer vi rettelser →</a></section><a class="back-to-top" href="#main">Til toppen ↑</a></div></div></article>'
+
+
+def about_html() -> str:
+    c = comments_copy()
+    privacy = (f'<h3 id="personvern-kommentarer">{esc(c["privacy_heading"])}</h3>'
+               + ''.join(f'<p>{esc(c[key])}</p>' for key in ('privacy_comments', 'privacy_security', 'privacy_rights')))
+    return ABOUT.replace('sporingsskript, kontaktskjemaer eller', 'sporingsskript eller').replace('<h2>Et nettsted under utvikling</h2>', privacy + '<h2>Et nettsted under utvikling</h2>')
 
 
 def story_rows(articles: list[dict]) -> str:
@@ -489,7 +521,7 @@ def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') 
             continue
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', article['slug']):
             raise ValueError(f'Invalid article slug in {file}')
-        if article['slug'] in {'index', 'om', 'tips', 'stats', 'stemmer', 'redaksjonen', '404'}:
+        if article['slug'] in {'index', 'om', 'tips', 'stats', 'moderering', 'api', 'stemmer', 'redaksjonen', '404'}:
             raise ValueError(f'Reserved article slug in {file}')
         if article['status'] == 'published' and not (article.get('approved_by') and article.get('approved_at')):
             raise ValueError(f'Published article lacks recorded editorial decision: {file}')
@@ -497,6 +529,8 @@ def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') 
             raise ValueError(f'Published article needs a summary of 2-5 short points: {file}')
         if not article['sections'] or not article['sources']:
             raise ValueError(f'Article requires actual body and sources: {file}')
+        if 'comments' in article and not isinstance(article['comments'], bool):
+            raise ValueError(f'Article comments flag must be boolean: {file}')
         articles.append(article)
     if len({a['slug'] for a in articles}) != len(articles):
         raise ValueError('Duplicate article slug')
@@ -505,6 +539,10 @@ def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') 
         output = Path(temporary) / 'dist'
         output.mkdir()
         shutil.copyfile(HERE / 'style.css', output / 'style.css')
+        shutil.copyfile(HERE / 'contents.js', output / 'contents.js')
+        copy = comments_copy()
+        copy_json = json.dumps(copy, ensure_ascii=False).replace('<', '\\u003c')
+        (output / 'comments.js').write_text((HERE / 'comments.js').read_text(encoding='utf-8').replace('__COMMENTS_COPY__', copy_json), encoding='utf-8')
         for name in ['icon.svg', 'favicon.png', 'favicon.ico', 'apple-touch-icon.png', 'social.png']:
             shutil.copyfile(HERE / 'assets' / name, output / name)
         for article in articles:
@@ -514,12 +552,12 @@ def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') 
                 for name in media_files:
                     shutil.copyfile(HERE / 'media' / article['slug'] / name, output / 'media' / article['slug'] / name)
             pages_ocr = transcripts(article)
-            (output / f'{article["slug"]}.html').write_text(page(article['title'], article_html(article, pages_ocr), preview, voices, article['slug'] + '.html', article), encoding='utf-8')
+            (output / f'{article["slug"]}.html').write_text(page(article['title'], article_html(article, pages_ocr, preview), preview, voices, article['slug'] + '.html', article), encoding='utf-8')
             for name, data in pages_ocr.items():
                 meta = dict(title=data['title'], deck=data['deck'], kind='Metode', date=article['date'])
                 (output / name).write_text(page(data['title'], transcript_html(article, name, data), preview, voices, name, meta), encoding='utf-8')
         (output / 'index.html').write_text(page('Norsk journalistikk', home_html(articles, preview), preview, voices, 'index.html'), encoding='utf-8')
-        (output / 'om.html').write_text(page('Slik jobber vi', ABOUT, preview, voices, 'om.html'), encoding='utf-8')
+        (output / 'om.html').write_text(page('Slik jobber vi', about_html(), preview, voices, 'om.html'), encoding='utf-8')
         (output / 'tips.html').write_text(page('Tips oss', TIPS, preview, voices, 'tips.html'), encoding='utf-8')
         voice_count = 0
         voice_choice = None
@@ -535,12 +573,15 @@ def build(preview: bool, audition_root: Path | None, output_name: str = 'dist') 
         if not preview:
             (output / '404.html').write_text(page('Siden finnes ikke', '<article class="article"><p class="eyebrow">404</p><h1>Siden finnes ikke.</h1><p>Adressen kan være feil, eller siden er flyttet.</p><a class="read" href="index.html">Til forsiden →</a></article>', False, False, '404.html'), encoding='utf-8')
             public_paths = sorted('/' if p.name == 'index.html' else '/' + p.stem for p in output.glob('*.html') if p.name != '404.html')
-            worker = (HERE / 'worker.mjs').read_text(encoding='utf-8').replace('__PUBLIC_PATHS__', json.dumps(public_paths))
+            comment_articles = {a['slug']: {'title': a['title'], 'open': a.get('comments', True)} for a in articles}
+            comments = (HERE / 'comments.mjs').read_text(encoding='utf-8').replace('__COMMENT_ARTICLES__', json.dumps(comment_articles, ensure_ascii=False)).replace('__COMMENTS_COPY__', copy_json)
+            worker = (HERE / 'worker.mjs').read_text(encoding='utf-8').replace('__PUBLIC_PATHS__', json.dumps(public_paths)).replace('// __COMMENTS_MODULE__', comments)
             (output / '_worker.js').write_text(worker, encoding='utf-8')
             shutil.copyfile(HERE / 'stats.css', output / 'stats.css')
-            static_paths = ['/style.css', '/stats.css', '/icon.svg', '/favicon.png', '/favicon.ico', '/apple-touch-icon.png', '/social.png', '/robots.txt', '/sitemap.xml']
+            shutil.copyfile(HERE / 'moderation.js', output / 'moderation.js')
+            static_paths = ['/style.css', '/contents.js', '/comments.js', '/moderation.js', '/stats.css', '/icon.svg', '/favicon.png', '/favicon.ico', '/apple-touch-icon.png', '/social.png', '/robots.txt', '/sitemap.xml']
             (output / '_routes.json').write_text(json.dumps({'version': 1, 'include': ['/*'], 'exclude': static_paths}), encoding='utf-8')
-            (output / '_headers').write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; frame-ancestors 'none'; form-action 'none'\n", encoding='utf-8')
+            (output / '_headers').write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; frame-ancestors 'none'; form-action 'none'\n", encoding='utf-8')
             pages = ['index.html', 'om.html', 'tips.html'] + [f'{a["slug"]}.html' for a in articles]
             sitemap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{"" if name == "index.html" else name.removesuffix(".html")}</loc></url>' for name in pages) + '</urlset>'
             (output / 'sitemap.xml').write_text(sitemap, encoding='utf-8')

@@ -113,8 +113,10 @@ h3{font-size:26px;margin:0 0 12px;letter-spacing:-.3px}
 .contents a{display:block;text-decoration:none;color:var(--muted);line-height:1.5}
 .contents>a{margin-top:10px}
 .contents a:hover{color:var(--red);text-decoration:underline}
+.contents a[aria-current=location]{color:var(--red);background:#eceee3;box-shadow:-4px 0 0 var(--red)}
 @media(min-width:761px){
-  .contents{max-height:calc(100vh - 50px);max-height:calc(100dvh - 50px);overflow-y:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable;padding:15px 8px 8px;scroll-padding-block:8px}
+  .contents{max-height:calc(100vh - 50px);max-height:calc(100dvh - 50px);overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:none;padding:15px 8px 8px;scroll-padding-block:8px}
+  .contents::-webkit-scrollbar{display:none}
 }
 .article-body>section{scroll-margin-top:25px}
 .article-body h2{font-size:30px;margin:35px 0 16px}
@@ -324,3 +326,26 @@ iframe{width:100%;aspect-ratio:16/9;border:0;margin-bottom:25px}
 @media(min-width:1120px){.comparison-matrix{width:1060px;margin-left:calc(50% - 530px)}.comparison-head{display:grid;grid-template-columns:180px repeat(3,minmax(0,1fr));gap:18px;font:700 12px/1.4 Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.06em;padding-bottom:8px;border-bottom:2px solid var(--ink)}.comparison-row{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px}.comparison-row dl{margin:0}.comparison-row dt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.comparison-head+.comparison-row{border-top:0}}
 @media print{.comparison-matrix{width:100%;margin-left:0}.article-details{break-inside:avoid}}
 @media(max-width:600px){body:has(.comparison-matrix) .masthead p{display:none}body:has(.comparison-matrix) .brand{white-space:nowrap}}
+.comments{border-top:3px solid var(--ink);margin:48px 0 24px;padding-top:20px;scroll-margin-top:24px}
+.article-body .comments>p,.article-body .comment-rules p{font:15px/1.6 Arial,Helvetica,sans-serif}
+.comment-rules{border:1px solid var(--line);padding:12px 16px;margin:20px 0;background:var(--white);font-size:14px}
+.comment-rules summary{cursor:pointer;font-weight:700}
+.comment-form{background:var(--green);padding:22px;margin:24px 0}
+.comment-form label{display:block;font:700 14px/1.5 Arial,Helvetica,sans-serif;margin:14px 0 6px}
+.comment-form input,.comment-form textarea{display:block;width:100%;max-width:100%;border:1px solid var(--muted);border-radius:0;background:var(--white);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif;padding:10px 12px}
+.comment-form textarea{resize:vertical;min-height:130px}
+.article-body .comment-help,.comment-help{font:13px/1.55 Arial,Helvetica,sans-serif;color:var(--muted);margin:6px 0 12px}
+.comments button,.comment-moderation button{border:1px solid var(--ink);background:var(--white);color:var(--ink);padding:9px 15px;min-height:44px;cursor:pointer;font:14px/1.5 Arial,Helvetica,sans-serif}
+.comments button[type=submit]{background:var(--ink);color:var(--white);margin-top:8px}
+.comments button:hover:not(:disabled),.comment-moderation button:hover:not(:disabled){background:var(--ink);color:var(--white)}
+.comments button:disabled,.comment-moderation button:disabled{opacity:.6;cursor:wait}
+.comment-honey{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.comment-item{border-top:1px solid var(--line);padding:20px 0;overflow-wrap:anywhere}
+.comment-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;font:15px/1.5 Arial,Helvetica,sans-serif}
+.comment-meta time,.comment-parent{font:13px/1.5 Arial,Helvetica,sans-serif;color:var(--muted)}
+.article-body .comment-text,.comment-text{white-space:pre-wrap;overflow-wrap:anywhere;font:16px/1.7 Arial,Helvetica,sans-serif;margin:12px 0}
+.comment-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.comment-status{font-weight:700;overflow-wrap:anywhere}
+.comment-moderation{max-width:1000px;padding-top:32px;padding-bottom:64px}
+@media(max-width:600px){.comment-form{padding:16px}.comment-meta{display:block}.comment-meta time{display:block}}
+@media print{.comments{display:none}}

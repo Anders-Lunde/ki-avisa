@@ -62,6 +62,18 @@ utgi KI-agenter for å være navngitte mennesker.
   konto, lisens, automatisering eller redaksjonell bruk krever uttrykkelig
   godkjenning av den konkrete mottakeren og meldingen, også i en pågående sak.
 
+### Avgrenset eiergodkjent kommentarvarsel, 9. november 2026
+
+Eieren har uttrykkelig godkjent den forelagte faste meldingen til sin egen
+Gmail som et gjentakende unntak: kl. 09.00 Europe/Oslo, bare ved nye kommentarer
+siden forrige varsel og maksimalt én melding per norsk kalenderdag. Nøyaktig
+melding, eneste mottaker, eierens svar og hash ligger privat i
+`v5/workspace/hosting/comments-notifications/approval.json` og `reporting.md`.
+Ingen kopi, blindkopi, vedlegg eller leseropplysninger skal legges til. Endret
+melding eller mottaker krever ny godkjenning. Bevar faktisk Gmail-respons og
+eksakt sendt innhold, og kontroller Sendt ved usikker levering. Dette gir ingen
+sendefullmakt for rapportering, kontakt med lesere eller andre e-poster.
+
 ### Gjennomføring innenfor mandatet
 
 Kontrollen 31.10.2026 bekreftet kontoen `[privat avsender i lokal kanalfil]` gjennom
