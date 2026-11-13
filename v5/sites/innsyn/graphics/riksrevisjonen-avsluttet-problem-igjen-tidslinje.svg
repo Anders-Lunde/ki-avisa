@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 1000" width="480" height="1000" font-family="Arial, Helvetica, sans-serif">
+<title>Tre oppfølgingsløp hos Riksrevisjonen og 49 av 108 avslutninger</title>
+<rect width="480" height="1000" fill="#fffdf7"/>
+<text x="16" y="30" font-size="19" font-weight="700" fill="#23312f">Avsluttet, men ikke nødvendigvis løst</text>
+<text x="16" y="52" font-size="14" fill="#58645e">Riksrevisjonens oppfølgingsrapporter 2014–2025</text>
+<text x="16" y="84" font-size="15" font-weight="700" fill="#23312f">108 avslutninger, delt inn av KI-avisa</text>
+<rect x="16.0" y="94" width="203.3" height="28" fill="#a93828"/>
+<text x="24.0" y="113" font-size="15" font-weight="700" fill="#fffdf7">49</text>
+<rect x="219.3" y="94" width="145.2" height="28" fill="#8a948d"/>
+<text x="227.3" y="113" font-size="15" font-weight="700" fill="#fffdf7">35</text>
+<rect x="364.4" y="94" width="99.6" height="28" fill="#cbd0c5"/>
+<text x="372.4" y="113" font-size="15" font-weight="700" fill="#23312f">24</text>
+<rect x="16" y="133" width="12" height="12" fill="#a93828"/>
+<text x="36" y="144" font-size="14" fill="#23312f">49: et sentralt problem sto uttrykkelig igjen</text>
+<rect x="16" y="155" width="12" height="12" fill="#8a948d"/>
+<text x="36" y="166" font-size="14" fill="#23312f">35: avgrenset rest, nytt forhold eller uklar effekt</text>
+<rect x="16" y="177" width="12" height="12" fill="#cbd0c5"/>
+<text x="36" y="188" font-size="14" fill="#23312f">24: ingen konkret rest påpekt – ikke bevis for løst</text>
+<path d="M16,210H464" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="234" font-size="15" font-weight="700" fill="#23312f">Tre forløp</text>
+<text x="344.0" y="234" font-size="13" fill="#58645e" text-anchor="middle">2012</text>
+<text x="395.4" y="234" font-size="13" fill="#58645e" text-anchor="middle">2018</text>
+<text x="446.9" y="234" font-size="13" fill="#58645e" text-anchor="middle">2024</text>
+<path d="M344.0,242V840" stroke="#cbd0c5" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M395.4,242V840" stroke="#cbd0c5" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M446.9,242V840" stroke="#cbd0c5" stroke-width="0.6" stroke-dasharray="2 3"/>
+<text x="16" y="272" font-size="16" font-weight="700" fill="#23312f">Politiets IT-sikkerhet</text>
+<text x="16" y="302" font-size="15" fill="#23312f">2019 · Plan: avvikene lukket innen 2024</text>
+<text x="16" y="320" font-size="13" fill="#58645e">Kallmyr (Frp), Solberg-regjeringen</text>
+<path d="M344,306H464" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="409.3" cy="306.0" r="5" fill="#fffdf7" stroke="#23312f" stroke-width="2"/>
+<text x="16" y="350" font-size="15" fill="#23312f">2020 · «I rute», men fortsatt stor risiko</text>
+<text x="16" y="368" font-size="13" fill="#58645e">Mæland (H), Solberg-regjeringen</text>
+<path d="M344,354H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="414.8" y="349.0" width="10" height="10" fill="#58645e"/>
+<text x="16" y="398" font-size="15" fill="#23312f">2023 · Enkelte tiltak forsinket</text>
+<text x="16" y="416" font-size="13" fill="#58645e">Mehl (Sp), Støre-regjeringen</text>
+<path d="M344,402H464" stroke="#cbd0c5" stroke-width="1"/>
+<circle cx="446.5" cy="402.0" r="5" fill="#fffdf7" stroke="#23312f" stroke-width="2"/>
+<text x="16" y="446" font-size="15" fill="#23312f">2025 · Målene ikke nådd. Avsluttet</text>
+<text x="16" y="464" font-size="13" fill="#58645e">Aas-Hansen (Ap), Støre-regjeringen</text>
+<path d="M344,450H464" stroke="#cbd0c5" stroke-width="1"/>
+<path d="M463.2,443.0L470.2,450.0L463.2,457.0L456.2,450.0Z" fill="#a93828"/>
+<text x="16" y="502" font-size="16" font-weight="700" fill="#23312f">Rehabilitering</text>
+<text x="16" y="532" font-size="15" fill="#23312f">2012 · Mangler data om kapasitet</text>
+<text x="16" y="550" font-size="13" fill="#58645e">Strøm-Erichsen (Ap), Stoltenberg II</text>
+<path d="M344,536H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="340.5" y="531.0" width="10" height="10" fill="#58645e"/>
+<text x="16" y="580" font-size="15" fill="#23312f">2015 · 57 dager i 2010 og 2013. Avsluttet</text>
+<text x="16" y="598" font-size="13" fill="#58645e">Høie (H), Solberg-regjeringen</text>
+<path d="M344,584H464" stroke="#cbd0c5" stroke-width="1"/>
+<path d="M376.6,577.0L383.6,584.0L376.6,591.0L369.6,584.0Z" fill="#a93828"/>
+<text x="16" y="628" font-size="15" fill="#23312f">2024 · Ny undersøkelse: datamangel består</text>
+<text x="16" y="646" font-size="13" fill="#58645e">Kjerkol (Ap), Støre-regjeringen</text>
+<path d="M344,632H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="442.9" y="627.0" width="10" height="10" fill="#58645e"/>
+<text x="16" y="684" font-size="16" font-weight="700" fill="#23312f">Arkivering og innsyn</text>
+<text x="16" y="714" font-size="15" fill="#23312f">2017 · Mangelfull arkivering svekker innsyn</text>
+<text x="16" y="732" font-size="13" fill="#58645e">Sanner (H), Solberg-regjeringen</text>
+<path d="M344,718H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="385.4" y="713.0" width="10" height="10" fill="#58645e"/>
+<text x="16" y="762" font-size="15" fill="#23312f">2021 · Fortsatt vesentlige svakheter</text>
+<text x="16" y="780" font-size="13" fill="#58645e">Gjaldt Solberg-årene, svar fra Støre-regjeringen</text>
+<path d="M344,766H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="424.1" y="761.0" width="10" height="10" fill="#58645e"/>
+<text x="16" y="810" font-size="15" fill="#23312f">2024 · Arkivsystem bare i pilot. Avsluttet</text>
+<text x="16" y="828" font-size="13" fill="#58645e">Støre-regjeringen · flere tiltak gjennomført</text>
+<path d="M344,814H464" stroke="#cbd0c5" stroke-width="1"/>
+<path d="M453.6,807.0L460.6,814.0L453.6,821.0L446.6,814.0Z" fill="#fffdf7" stroke="#a93828" stroke-width="2"/>
+<path d="M16,850H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="21.0" y="858.0" width="10" height="10" fill="#58645e"/>
+<text x="42" y="868" font-size="14" fill="#23312f">Riksrevisjonens funn eller oppfølging</text>
+<circle cx="26.0" cy="885.0" r="5" fill="#fffdf7" stroke="#23312f" stroke-width="2"/>
+<text x="42" y="890" font-size="14" fill="#23312f">Departementets plan eller status</text>
+<path d="M26.0,900.0L33.0,907.0L26.0,914.0L19.0,907.0Z" fill="#a93828"/>
+<text x="42" y="912" font-size="14" fill="#23312f">Avsluttet – blant de 49</text>
+<path d="M26.0,922.0L33.0,929.0L26.0,936.0L19.0,929.0Z" fill="#fffdf7" stroke="#a93828" stroke-width="2"/>
+<text x="42" y="934" font-size="14" fill="#23312f">Avsluttet – ikke blant de 49</text>
+<text x="16" y="956" font-size="14" fill="#58645e">Grå tekst: ansvarlig statsråd og regjering</text>
+<text x="16" y="984" font-size="12" fill="#58645e">Kilde: Riksrevisjonen. Inndeling og utvalg: KI-avisa.</text>
+</svg>

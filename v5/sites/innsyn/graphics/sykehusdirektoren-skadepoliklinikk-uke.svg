@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 602" width="480" height="602" font-family="Arial, Helvetica, sans-serif">
+<title>Skadepoliklinikken i Lærdal før og etter 1. juni 2026</title>
+<desc>To ukeskjemaer. Før 1. juni 2026 var skadepoliklinikken i Lærdal åpen dag, kveld og natt alle ukedager. Fra 1. juni er den etter planen bare åpen på dagtid mandag til fredag; ellers vurderer legevakten pasientene, og de som må videre, skal til Førde, 2 timer og 15 minutter unna på dagtid.</desc>
+<rect width="480" height="602" fill="#fffdf7"/>
+<text x="16" y="30" font-size="19" fill="#23312f" font-weight="700">Skadepoliklinikken i Lærdal</text>
+<text x="16" y="52" font-size="14" fill="#58645e">Når pasienter med lette og moderate skader kan komme</text>
+<text x="16" y="92" font-size="15" fill="#23312f" font-weight="700">Før 1. juni 2026</text>
+<text x="98.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Man</text>
+<text x="154.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Tir</text>
+<text x="210.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Ons</text>
+<text x="266.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Tor</text>
+<text x="322.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Fre</text>
+<text x="378.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Lør</text>
+<text x="434.0" y="118" font-size="12" fill="#58645e" text-anchor="middle">Søn</text>
+<text x="16" y="146" font-size="13" fill="#23312f">Dag</text>
+<rect x="72" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="128" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="184" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="240" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="296" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="352" y="126" width="52" height="26" fill="#23312f"/>
+<rect x="408" y="126" width="52" height="26" fill="#23312f"/>
+<text x="16" y="176" font-size="13" fill="#23312f">Kveld</text>
+<rect x="72" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="128" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="184" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="240" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="296" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="352" y="156" width="52" height="26" fill="#23312f"/>
+<rect x="408" y="156" width="52" height="26" fill="#23312f"/>
+<text x="16" y="206" font-size="13" fill="#23312f">Natt</text>
+<rect x="72" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="128" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="184" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="240" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="296" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="352" y="186" width="52" height="26" fill="#23312f"/>
+<rect x="408" y="186" width="52" height="26" fill="#23312f"/>
+<text x="16" y="230" font-size="13" fill="#58645e">Lege på vakt hele døgnet, ortoped på bakvakt i Lærdal. De fleste</text>
+<text x="16" y="248" font-size="13" fill="#58645e">pasientene kom mellom kl. 8 og 16.</text>
+<path d="M16,274H464" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="306" font-size="15" fill="#23312f" font-weight="700">Fra 1. juni 2026 (plan)</text>
+<text x="98.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Man</text>
+<text x="154.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Tir</text>
+<text x="210.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Ons</text>
+<text x="266.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Tor</text>
+<text x="322.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Fre</text>
+<text x="378.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Lør</text>
+<text x="434.0" y="332" font-size="12" fill="#58645e" text-anchor="middle">Søn</text>
+<text x="16" y="360" font-size="13" fill="#23312f">Dag</text>
+<rect x="72" y="340" width="52" height="26" fill="#23312f"/>
+<rect x="128" y="340" width="52" height="26" fill="#23312f"/>
+<rect x="184" y="340" width="52" height="26" fill="#23312f"/>
+<rect x="240" y="340" width="52" height="26" fill="#23312f"/>
+<rect x="296" y="340" width="52" height="26" fill="#23312f"/>
+<rect x="352.5" y="340.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="408.5" y="340.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<text x="16" y="390" font-size="13" fill="#23312f">Kveld</text>
+<rect x="72.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="128.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="184.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="240.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="296.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="352.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="408.5" y="370.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<text x="16" y="420" font-size="13" fill="#23312f">Natt</text>
+<rect x="72.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="128.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="184.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="240.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="296.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="352.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<rect x="408.5" y="400.5" width="51" height="25" fill="#f6f3eb" stroke="#cbd0c5"/>
+<text x="16" y="444" font-size="13" fill="#58645e">Dagtid på hverdager, med ortopeder fra Førde og noen vikarer.</text>
+<text x="16" y="462" font-size="13" fill="#58645e">Gjelder dem som bor sør for Sognefjorden.</text>
+<rect x="16" y="490" width="14" height="14" fill="#23312f"/>
+<text x="38" y="502" font-size="13" fill="#23312f">Åpent i Lærdal</text>
+<rect x="160.5" y="490.5" width="13" height="13" fill="#f6f3eb" stroke="#cbd0c5"/>
+<text x="182" y="502" font-size="13" fill="#23312f">Stengt: legevakten vurderer, ev. Førde</text>
+<rect x="16" y="524" width="448" height="62" fill="#e1e7db"/>
+<text x="28" y="548" font-size="15" fill="#23312f" font-weight="700">Lærdal–Førde: 2 t 15 min på dagtid</text>
+<text x="28" y="570" font-size="13" fill="#23312f">Om natta går ferjene sjeldnere, og reisen kan ta lenger tid.</text>
+</svg>

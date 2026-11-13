@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 519" width="480" height="519" font-family="Arial, Helvetica, sans-serif">
+<title>Direktørens vekting av prioriteringskriteriene</title>
+<desc>Nytte vektet nøytralt, ressursbruk høyt og alvorlighet lavt til moderat. Konklusjonen var at innsparingen veier opp for de negative konsekvensene.</desc>
+<rect width="480" height="519" fill="#fffdf7"/>
+<text x="16" y="30" font-size="19" fill="#23312f" font-weight="700">Slik veide direktøren</text>
+<text x="16" y="52" font-size="14" fill="#58645e">Prioriteringskriteriene i saksframlegget til styret</text>
+<path d="M16,78H464" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="106" font-size="16" fill="#23312f" font-weight="700">Nytte</text>
+<rect x="389.8" y="90" width="74.19999999999999" height="24" fill="#e1e7db"/>
+<text x="426.9" y="107" font-size="12.5" fill="#23312f" font-weight="700" text-anchor="middle">NØYTRAL</text>
+<text x="16" y="134" font-size="13" fill="#58645e">Ingen forskjell ventet i kvaliteten på behandlingen.</text>
+<path d="M16,160H464" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="188" font-size="16" fill="#23312f" font-weight="700">Ressursbruk</text>
+<rect x="424.2" y="172" width="39.8" height="24" fill="#a93828"/>
+<text x="444.1" y="189" font-size="12.5" fill="#fffdf7" font-weight="700" text-anchor="middle">HØY</text>
+<text x="16" y="216" font-size="13" fill="#58645e">Om lag 24 millioner kroner spart i året (anslag før</text>
+<text x="16" y="234" font-size="13" fill="#58645e">endringen).</text>
+<path d="M16,260H464" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="288" font-size="16" fill="#23312f" font-weight="700">Alvorlighet</text>
+<rect x="321.0" y="272" width="143.0" height="24" fill="#cbd0c5"/>
+<text x="392.5" y="289" font-size="12.5" fill="#23312f" font-weight="700" text-anchor="middle">LAV TIL MODERAT</text>
+<text x="16" y="316" font-size="13" fill="#58645e">Lengre reise og fare for senere behandling av lette og</text>
+<text x="16" y="334" font-size="13" fill="#58645e">moderate skader. Moderat for skrøpelige eldre og barn.</text>
+<path d="M16,360H464" stroke="#cbd0c5" stroke-width="1"/>
+<rect x="16" y="378" width="448" height="125" fill="#23312f"/>
+<text x="30" y="410" font-size="16" fill="#fffdf7" font-weight="700">«Samla sett veg ressursinnsparinga opp for dei</text>
+<text x="30" y="431" font-size="16" fill="#fffdf7" font-weight="700">negative konsekvensane i form av auka</text>
+<text x="30" y="452" font-size="16" fill="#fffdf7" font-weight="700">reisebelastning og svekka totalberedskap.»</text>
+<text x="30" y="483" font-size="12.5" fill="#fffdf7">Alternativet var ifølge direktøren å kutte andre tilbud like mye.</text>
+</svg>

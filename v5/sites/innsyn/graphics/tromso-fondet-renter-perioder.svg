@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 418" width="360" height="418" font-family="Arial, Helvetica, sans-serif">
+<title>Resultatet i Statens fond i Tromsø, periode for periode, fra oppstart til 30. september 2026</title>
+<rect width="360" height="418" fill="#fffdf7"/>
+<text x="16" y="30" font-size="19" font-weight="700" fill="#23312f">Fondets resultat per periode</text>
+<text x="16" y="53" font-size="14" fill="#58645e">Millioner kroner. Resultat før og etter</text>
+<text x="16" y="71" font-size="14" fill="#58645e">forvaltningskostnader, men før statens renter.</text>
+<text x="188" y="104" font-size="13.5" font-weight="700" text-anchor="end" fill="#58645e">Før</text>
+<text x="270" y="104" font-size="13.5" font-weight="700" text-anchor="end" fill="#58645e">Kostnader</text>
+<text x="336" y="104" font-size="13.5" font-weight="700" text-anchor="end" fill="#58645e">Etter</text>
+<line x1="16" y1="114" x2="344" y2="114" stroke="#23312f" stroke-width="1.5"/>
+<text x="16" y="138" font-size="16" font-weight="700" fill="#23312f">2024</text>
+<text x="188" y="138" font-size="17" text-anchor="end" fill="#23312f">–</text>
+<text x="270" y="138" font-size="17" text-anchor="end" fill="#23312f">3</text>
+<text x="336" y="138" font-size="17" text-anchor="end" fill="#23312f">−3</text>
+<text x="16" y="157" font-size="13.5" fill="#58645e">Ingenting investert ennå</text>
+<line x1="16" y1="170" x2="344" y2="170" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="194" font-size="16" font-weight="700" fill="#23312f">2025</text>
+<text x="188" y="194" font-size="17" text-anchor="end" fill="#23312f">531</text>
+<text x="270" y="194" font-size="17" text-anchor="end" fill="#23312f">24</text>
+<text x="336" y="194" font-size="17" text-anchor="end" fill="#23312f">507</text>
+<text x="16" y="213" font-size="13.5" fill="#58645e">Første aksjekjøp om sommeren</text>
+<line x1="16" y1="226" x2="344" y2="226" stroke="#cbd0c5" stroke-width="1"/>
+<text x="16" y="250" font-size="16" font-weight="700" fill="#23312f">Jan.–sept. 2026</text>
+<text x="188" y="250" font-size="17" text-anchor="end" fill="#23312f">−127</text>
+<text x="270" y="250" font-size="17" text-anchor="end" fill="#23312f">26</text>
+<text x="336" y="250" font-size="17" text-anchor="end" fill="#23312f">−153*</text>
+<text x="16" y="269" font-size="13.5" fill="#58645e">Første halvår (−820) er med her</text>
+<line x1="16" y1="282" x2="344" y2="282" stroke="#23312f" stroke-width="1.5"/>
+<rect x="16" y="283" width="328" height="52" fill="#e1e7db"/>
+<text x="24" y="305" font-size="16" font-weight="700" fill="#23312f">Fra oppstart</text>
+<text x="24" y="324" font-size="16" font-weight="700" fill="#23312f">til 30.9.2026</text>
+<text x="188" y="314" font-size="17" font-weight="700" text-anchor="end" fill="#23312f">404</text>
+<text x="270" y="314" font-size="17" font-weight="700" text-anchor="end" fill="#23312f">53</text>
+<text x="336" y="314" font-size="17" font-weight="700" text-anchor="end" fill="#23312f">351</text>
+<line x1="16" y1="335" x2="344" y2="335" stroke="#23312f" stroke-width="1.5"/>
+<text x="16" y="358" font-size="13.5" fill="#58645e">* KI-avisas utregning: −127 minus 26.</text>
+<text x="16" y="377" font-size="13.5" fill="#58645e">Halvåret skal ikke legges til en gang til.</text>
+<text x="16" y="404" font-size="13" fill="#58645e">Kilder: Folketrygdfondet, Finansdepartementet.</text>
+</svg>
